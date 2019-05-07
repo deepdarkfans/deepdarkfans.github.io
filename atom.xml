@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.deepdark.com/"/>
-  <updated>2019-05-07T09:56:24.983Z</updated>
+  <updated>2019-05-06T12:16:31.155Z</updated>
   <id>https://www.deepdark.com/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>MathJax使用</title>
-    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/MathJax%E5%9C%A8Hexo%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>https://www.deepdark.com/技术/MathJax在Hexo中的使用/</id>
-    <published>2019-05-06T16:00:00.000Z</published>
-    <updated>2019-05-07T09:56:24.983Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;MathJax使用&quot;&gt;&lt;a href=&quot;#MathJax使用&quot; class=&quot;headerlink&quot; title=&quot;MathJax使用&quot;&gt;&lt;/a&gt;MathJax使用&lt;/h1&gt;&lt;p&gt;LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="mathjax" scheme="https://www.deepdark.com/tags/mathjax/"/>
-    
-      <category term="Hexo" scheme="https://www.deepdark.com/tags/Hexo/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -448,6 +423,31 @@
     
     
       <category term="Swift" scheme="https://www.deepdark.com/tags/Swift/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「体能训练理论」之金字塔</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E9%87%91%E5%AD%97%E5%A1%94/"/>
+    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之金字塔/</id>
+    <published>2017-07-09T16:00:00.000Z</published>
+    <updated>2019-05-07T09:14:47.665Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;体能，人体基础运动能力的统称，人体的本质属性，它支撑着日常生活工作的需要，也支撑着运动技战术的表现。 体能思路，是指导我们设计实施体能训练的
+      
+    
+    </summary>
+    
+      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="健身" scheme="https://www.deepdark.com/tags/%E5%81%A5%E8%BA%AB/"/>
+    
+      <category term="生活" scheme="https://www.deepdark.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
