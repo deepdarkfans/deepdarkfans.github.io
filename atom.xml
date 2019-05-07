@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.deepdark.com/"/>
-  <updated>2019-05-06T12:16:31.155Z</updated>
+  <updated>2019-05-07T09:56:24.983Z</updated>
   <id>https://www.deepdark.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MathJax使用</title>
+    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/MathJax%E5%9C%A8Hexo%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>https://www.deepdark.com/技术/MathJax在Hexo中的使用/</id>
+    <published>2019-05-06T16:00:00.000Z</published>
+    <updated>2019-05-07T09:56:24.983Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;MathJax使用&quot;&gt;&lt;a href=&quot;#MathJax使用&quot; class=&quot;headerlink&quot; title=&quot;MathJax使用&quot;&gt;&lt;/a&gt;MathJax使用&lt;/h1&gt;&lt;p&gt;LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="mathjax" scheme="https://www.deepdark.com/tags/mathjax/"/>
+    
+      <category term="Hexo" scheme="https://www.deepdark.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -136,6 +161,29 @@
   </entry>
   
   <entry>
+    <title>Linux解压中文密码的压缩文件</title>
+    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-29-Linux%E8%A7%A3%E5%8E%8B%E4%B8%AD%E6%96%87%E5%AF%86%E7%A0%81%E7%9A%84%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6/"/>
+    <id>https://www.deepdark.com/技术/2019-4-29-Linux解压中文密码的压缩文件/</id>
+    <published>2019-04-28T16:00:00.000Z</published>
+    <updated>2019-05-07T09:14:47.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Linux解压中文密码的压缩文件&quot;&gt;&lt;a href=&quot;#Linux解压中文密码的压缩文件&quot; class=&quot;headerlink&quot; title=&quot;Linux解压中文密码的压缩文件&quot;&gt;&lt;/a&gt;Linux解压中文密码的压缩文件&lt;/h1&gt;&lt;p&gt;最近遇到个小问题，我在ubu
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Linux" scheme="https://www.deepdark.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>私人用机场推荐</title>
     <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-29-%E7%A7%81%E4%BA%BA%E7%94%A8%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90/"/>
     <id>https://www.deepdark.com/技术/2019-4-29-私人用机场推荐/</id>
@@ -156,29 +204,6 @@
     
     
       <category term="个人笔记" scheme="https://www.deepdark.com/tags/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux解压中文密码的压缩文件</title>
-    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-29-Linux%E8%A7%A3%E5%8E%8B%E4%B8%AD%E6%96%87%E5%AF%86%E7%A0%81%E7%9A%84%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6/"/>
-    <id>https://www.deepdark.com/技术/2019-4-29-Linux解压中文密码的压缩文件/</id>
-    <published>2019-04-28T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.158Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Linux解压中文密码的压缩文件&quot;&gt;&lt;a href=&quot;#Linux解压中文密码的压缩文件&quot; class=&quot;headerlink&quot; title=&quot;Linux解压中文密码的压缩文件&quot;&gt;&lt;/a&gt;Linux解压中文密码的压缩文件&lt;/h1&gt;&lt;p&gt;最近遇到个小问题，我在ubu
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Linux" scheme="https://www.deepdark.com/tags/Linux/"/>
     
   </entry>
   
@@ -207,29 +232,6 @@
   </entry>
   
   <entry>
-    <title>自己的第一篇博客</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://www.deepdark.com/日常/2019-04-16-第一篇博客/</id>
-    <published>2019-04-15T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.158Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;先test一哈&quot;&gt;&lt;a href=&quot;#先test一哈&quot; class=&quot;headerlink&quot; title=&quot;先test一哈&quot;&gt;&lt;/a&gt;&lt;strong&gt;先test一哈&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;马上毕业，先搞个代码块&lt;br&gt;&lt;figure class=&quot;hig
-      
-    
-    </summary>
-    
-      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="日常" scheme="https://www.deepdark.com/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>试一下插入图片</title>
     <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     <id>https://www.deepdark.com/日常/2019-04-16-插入图片/</id>
@@ -249,6 +251,29 @@
     
     
       <category term="Daily" scheme="https://www.deepdark.com/tags/Daily/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己的第一篇博客</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://www.deepdark.com/日常/2019-04-16-第一篇博客/</id>
+    <published>2019-04-15T16:00:00.000Z</published>
+    <updated>2019-05-07T09:14:47.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;先test一哈&quot;&gt;&lt;a href=&quot;#先test一哈&quot; class=&quot;headerlink&quot; title=&quot;先test一哈&quot;&gt;&lt;/a&gt;&lt;strong&gt;先test一哈&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;马上毕业，先搞个代码块&lt;br&gt;&lt;figure class=&quot;hig
+      
+    
+    </summary>
+    
+      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="日常" scheme="https://www.deepdark.com/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
@@ -463,31 +488,6 @@
       
       
         &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;体能训练是一种开源的程序它所依仗的并不是固有的方法手段，而是能够贯穿始终的逻辑，它是一种指导实践的思维方式，我们管它叫“体能思路”。&lt;/p&gt;
-      
-    
-    </summary>
-    
-      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="健身" scheme="https://www.deepdark.com/tags/%E5%81%A5%E8%BA%AB/"/>
-    
-      <category term="生活" scheme="https://www.deepdark.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「体能训练理论」之金字塔</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E9%87%91%E5%AD%97%E5%A1%94/"/>
-    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之金字塔/</id>
-    <published>2017-07-09T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.665Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;体能，人体基础运动能力的统称，人体的本质属性，它支撑着日常生活工作的需要，也支撑着运动技战术的表现。 体能思路，是指导我们设计实施体能训练的
       
     
     </summary>

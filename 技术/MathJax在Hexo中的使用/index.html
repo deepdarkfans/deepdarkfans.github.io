@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Xcode,开发技巧,">
+  <meta name="keywords" content="mathjax,Hexo,">
 
 
 
@@ -81,22 +81,18 @@
 
 
 
-<meta name="description" content="前言平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和不便， 在这个 ARC 时代更常见的内存泄露是循环引用导致的 Abandoned memory，Leaks 工具查不出这类内存泄露，应用有限。 今天介绍一种简单直接的检测内测泄漏的方法：Debug Memory Graph 就是这货：  正文我最近的项目中">
-<meta name="keywords" content="Xcode,开发技巧">
+<meta name="description" content="MathJax使用LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。 行中公式可以用如下两种方法表示：＼(数学公式＼)　或　数学公式独立公式可以用如下两种方法表示：＼[数学公式＼]　或　$$$ 数学公式 $$$ 例子：＼$[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \al">
+<meta name="keywords" content="mathjax,Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用 Debug Memory Graph 检测内测泄漏">
-<meta property="og:url" content="https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/index.html">
+<meta property="og:title" content="MathJax使用">
+<meta property="og:url" content="https://www.deepdark.com/技术/MathJax在Hexo中的使用/index.html">
 <meta property="og:site_name" content="Cyh Blog">
-<meta property="og:description" content="前言平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和不便， 在这个 ARC 时代更常见的内存泄露是循环引用导致的 Abandoned memory，Leaks 工具查不出这类内存泄露，应用有限。 今天介绍一种简单直接的检测内测泄漏的方法：Debug Memory Graph 就是这货：  正文我最近的项目中">
+<meta property="og:description" content="MathJax使用LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。 行中公式可以用如下两种方法表示：＼(数学公式＼)　或　数学公式独立公式可以用如下两种方法表示：＼[数学公式＼]　或　$$$ 数学公式 $$$ 例子：＼$[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \al">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fhxct12udnj311x0s3grw.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fhxend1a8aj315y0s3gw5.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fhxeuh1np5j30v90kvn03.jpg">
-<meta property="og:updated_time" content="2019-05-07T09:14:47.159Z">
+<meta property="og:updated_time" content="2019-05-07T09:56:24.983Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用 Debug Memory Graph 检测内测泄漏">
-<meta name="twitter:description" content="前言平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和不便， 在这个 ARC 时代更常见的内存泄露是循环引用导致的 Abandoned memory，Leaks 工具查不出这类内存泄露，应用有限。 今天介绍一种简单直接的检测内测泄漏的方法：Debug Memory Graph 就是这货：  正文我最近的项目中">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fhxct12udnj311x0s3grw.jpg">
+<meta name="twitter:title" content="MathJax使用">
+<meta name="twitter:description" content="MathJax使用LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。 行中公式可以用如下两种方法表示：＼(数学公式＼)　或　数学公式独立公式可以用如下两种方法表示：＼[数学公式＼]　或　$$$ 数学公式 $$$ 例子：＼$[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \al">
 
 
 
@@ -126,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/">
+  <link rel="canonical" href="https://www.deepdark.com/技术/MathJax在Hexo中的使用/">
 
 
 
 
 
-  <title>利用 Debug Memory Graph 检测内测泄漏 | Cyh Blog</title>
+  <title>MathJax使用 | Cyh Blog</title>
   
 
 
@@ -290,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/">
+    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/技术/MathJax在Hexo中的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cao Yihao">
@@ -307,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">利用 Debug Memory Graph 检测内测泄漏</h1>
+          <h1 class="post-title" itemprop="name headline">MathJax使用</h1>
         
 
         <div class="post-meta">
@@ -319,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T00:00:00+08:00">
-                2017-07-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T00:00:00+08:00">
+                2019-05-07
               </time>
             
 
@@ -360,8 +356,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/" itemprop="commentCount"></span>
+                <a href="/技术/MathJax在Hexo中的使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="技术/MathJax在Hexo中的使用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -383,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  509
+                  428
                 </span>
               
 
@@ -399,7 +395,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -420,27 +416,27 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和不便，</p>
-<p>在这个 ARC 时代更常见的内存泄露是循环引用导致的 Abandoned memory，Leaks 工具查不出这类内存泄露，应用有限。</p>
-<p>今天介绍一种简单直接的检测内测泄漏的方法：<strong>Debug Memory Graph</strong></p>
-<p>就是这货：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fhxct12udnj311x0s3grw.jpg" alt></p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>我最近的项目中，退出登录后（跳转到登录页），发现首页控制器没有被销毁，依旧能接收通知。</p>
-<p>退出登录代码：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIStoryboard</span> *storyboard = [<span class="built_in">UIStoryboard</span> storyboardWithName:<span class="string">@"Login"</span> bundle:[<span class="built_in">NSBundle</span> mainBundle]];</span><br><span class="line">AppDelegate *appDelegate = (AppDelegate *)[<span class="built_in">UIApplication</span> sharedApplication].delegate;</span><br><span class="line">appDelegate.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:<span class="string">@"LoginVC"</span>];</span><br></pre></td></tr></table></figure>
-<p>很明显发生了循环引用导致的内测泄漏。</p>
-<p>接下来就使用 <strong>Debug Memory Graph</strong> 来查看内测泄漏了。</p>
-<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>首先启动 Xcode 运行程序。</p>
-<h3 id="Debug-Memory-Graph"><a href="#Debug-Memory-Graph" class="headerlink" title="Debug Memory Graph"></a>Debug Memory Graph</h3><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fhxend1a8aj315y0s3gw5.jpg" alt></p>
-<p>点击 Debug Memory Graph 按钮后，可以看到红框内的是当前内存中存在的对象。其中，绿色的就是视图控制器。</p>
-<p>这样，我们随时都可以查看内测中存在的对象，换句话说，就是可以通过观察 Memory Graph 查看内测泄漏。</p>
-<h3 id="调试你的App"><a href="#调试你的App" class="headerlink" title="调试你的App"></a>调试你的App</h3><p>继续运行你的程序</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fhxeuh1np5j30v90kvn03.jpg" alt></p>
-<p>然后对App进行调试、push、pop 操作，再次点击 Debug Memory Graph 按钮。那些该释放而依旧在内测中的 <code>控制器</code> 或 <code>对象</code> 就能一一找出来了。</p>
-<p>接下来，只要进入对应的控制器找到内测泄漏的代码就OK了，一般是Block里引用了 <code>self</code>，改为 <code>weakSelf</code> 就解决了。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define WS(weakSelf) __weak __typeof(&amp;*self)weakSelf = self;</span></span><br><span class="line"></span><br><span class="line">WS(weakSelf)</span><br><span class="line">sView.btnBlock = ^(<span class="built_in">NSInteger</span> idx)&#123;</span><br><span class="line">    [weakSelf.tableView reloadSections:[<span class="built_in">NSIndexSet</span> indexSetWithIndex:idx] withRowAnimation:<span class="built_in">UITableViewRowAnimationAutomatic</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>就这样，利用 Debug Memory Graph，可以简单快速的检测内测泄漏。</p>
-<p>一般由两个对象循环引用的内测泄漏是比较好发现的，如果是由三个及其三个以上的对象形成的大的循环引用，就会比较难排查了。</p>
+        <h1 id="MathJax使用"><a href="#MathJax使用" class="headerlink" title="MathJax使用"></a>MathJax使用</h1><p>LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。</p>
+<p>行中公式可以用如下两种方法表示：<br><code>＼(数学公式＼)</code>　或　<script type="math/tex">数学公式</script><br>独立公式可以用如下两种方法表示：<br><code>＼[数学公式＼]</code>　或　$$$ 数学公式 $$$</p>
+<p>例子：<code>＼$[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}＼]$</code></p>
+<p>显示 $[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}]$</p>
+<h2 id="如何插入公式大括号"><a href="#如何插入公式大括号" class="headerlink" title="如何插入公式大括号"></a>如何插入公式大括号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line">$$ f(x)=\left\&#123;</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">x &amp; = &amp; \cos(t) \\</span><br><span class="line">y &amp; = &amp; \sin(t) \\</span><br><span class="line">z &amp; = &amp; \frac xy</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">\right.</span><br><span class="line">$$</span><br><span class="line">方法二：</span><br><span class="line">$$ F^&#123;HLLC&#125;=\left\&#123;</span><br><span class="line">\begin&#123;array&#125;&#123;rcl&#125;</span><br><span class="line">F_L       &amp;      &amp; &#123;0      &lt;      S_L&#125;\\</span><br><span class="line">F^*_L     &amp;      &amp; &#123;S_L \leq 0 &lt; S_M&#125;\\</span><br><span class="line">F^*_R     &amp;      &amp; &#123;S_M \leq 0 &lt; S_R&#125;\\</span><br><span class="line">F_R       &amp;      &amp; &#123;S_R \leq 0&#125;</span><br><span class="line">\end&#123;array&#125; \right. $$</span><br><span class="line">方法三:</span><br><span class="line">$$f(x)=</span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">0&amp; \text&#123;x=0&#125;\\</span><br><span class="line">1&amp; \text&#123;x!=0&#125;</span><br><span class="line">\end&#123;cases&#125;$$</span><br></pre></td></tr></table></figure>
+<p>显示如下：<br>方法一：$$ f(x)=\left\{<br>\begin{aligned}<br>x &amp; = &amp; \cos(t) \\<br>y &amp; = &amp; \sin(t) \\<br>z &amp; = &amp; \frac xy<br>\end{aligned}<br>\right.</p>
+<script type="math/tex; mode=display">
+
+方法二：$$ F^{HLLC}=\left\{
+\begin{array}{rcl}
+F_L       &      & {0      <      S_L}\\
+F^*_L     &      & {S_L \leq 0 < S_M}\\
+F^*_R     &      & {S_M \leq 0 < S_R}\\
+F_R       &      & {S_R \leq 0}
+\end{array} \right.</script><p>方法三：<script type="math/tex">f(x)=
+\begin{cases}
+0& \text{x=0}\\
+1& \text{x!=0}
+\end{cases}</script></p>
+<h2 id="如何输入上下标"><a href="#如何输入上下标" class="headerlink" title="如何输入上下标"></a>如何输入上下标</h2><p>^表示上标, _表示下标。如果上下标的内容多于一个字符，要用{}把这些内容括起来当成一个整体。上下标是可以嵌套的，也可以同时使用。</p>
+<p>例子：<script type="math/tex">x^{y^z}=(1+{\rm e}^x)^{-2xy^w}</script><br>显示：$x^{y^z}=(1+{\rm e}^x)^{-2xy^w}$</p>
 
       
     </div>
@@ -463,11 +459,11 @@
         <ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者：</strong>
-    BY
+    CYH
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/" title="利用 Debug Memory Graph 检测内测泄漏">https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/</a>
+    <a href="https://www.deepdark.com/技术/MathJax在Hexo中的使用/" title="MathJax使用">https://www.deepdark.com/技术/MathJax在Hexo中的使用/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -482,9 +478,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Xcode/" rel="tag"># Xcode</a>
+            <a href="/tags/mathjax/" rel="tag"># mathjax</a>
           
-            <a href="/tags/开发技巧/" rel="tag"># 开发技巧</a>
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
           
         </div>
       
@@ -497,8 +493,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/技术/2017-07-24-iTunes-Connect-构建版本不显示/" rel="next" title="iTunes Connect 构建版本不显示">
-                <i class="fa fa-chevron-left"></i> iTunes Connect 构建版本不显示
+              <a href="/日常/Hello-World/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -506,10 +502,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/编程/2017-09-11-Swift-4-新特性/" rel="prev" title="Swift 4 新特性">
-                Swift 4 新特性 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -700,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行程序"><span class="nav-number">2.1.</span> <span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debug-Memory-Graph"><span class="nav-number">2.2.</span> <span class="nav-text">Debug Memory Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调试你的App"><span class="nav-number">2.3.</span> <span class="nav-text">调试你的App</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MathJax使用"><span class="nav-number">1.</span> <span class="nav-text">MathJax使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何插入公式大括号"><span class="nav-number">1.1.</span> <span class="nav-text">如何插入公式大括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何输入上下标"><span class="nav-number">1.2.</span> <span class="nav-text">如何输入上下标</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -872,9 +864,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/';
-          this.page.identifier = '技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/';
-          this.page.title = '利用 Debug Memory Graph 检测内测泄漏';
+          this.page.url = 'https://www.deepdark.com/技术/MathJax在Hexo中的使用/';
+          this.page.identifier = '技术/MathJax在Hexo中的使用/';
+          this.page.title = 'MathJax使用';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://blog-etellfvhpu.disqus.com/embed.js';
@@ -1242,6 +1234,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

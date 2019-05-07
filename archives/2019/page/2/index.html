@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Xcode,开发技巧,">
+  <meta name="keywords" content="Blog, Linux">
 
 
 
@@ -81,22 +81,17 @@
 
 
 
-<meta name="description" content="前言平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和不便， 在这个 ARC 时代更常见的内存泄露是循环引用导致的 Abandoned memory，Leaks 工具查不出这类内存泄露，应用有限。 今天介绍一种简单直接的检测内测泄漏的方法：Debug Memory Graph 就是这货：  正文我最近的项目中">
-<meta name="keywords" content="Xcode,开发技巧">
-<meta property="og:type" content="article">
-<meta property="og:title" content="利用 Debug Memory Graph 检测内测泄漏">
-<meta property="og:url" content="https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/index.html">
+<meta name="description" content="兴趣使然的无名小站">
+<meta name="keywords" content="blog,machine learning,linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cyh Blog">
+<meta property="og:url" content="https://www.deepdark.com/archives/2019/page/2/index.html">
 <meta property="og:site_name" content="Cyh Blog">
-<meta property="og:description" content="前言平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和不便， 在这个 ARC 时代更常见的内存泄露是循环引用导致的 Abandoned memory，Leaks 工具查不出这类内存泄露，应用有限。 今天介绍一种简单直接的检测内测泄漏的方法：Debug Memory Graph 就是这货：  正文我最近的项目中">
+<meta property="og:description" content="兴趣使然的无名小站">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fhxct12udnj311x0s3grw.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fhxend1a8aj315y0s3gw5.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fhxeuh1np5j30v90kvn03.jpg">
-<meta property="og:updated_time" content="2019-05-07T09:14:47.159Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用 Debug Memory Graph 检测内测泄漏">
-<meta name="twitter:description" content="前言平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和不便， 在这个 ARC 时代更常见的内存泄露是循环引用导致的 Abandoned memory，Leaks 工具查不出这类内存泄露，应用有限。 今天介绍一种简单直接的检测内测泄漏的方法：Debug Memory Graph 就是这货：  正文我最近的项目中">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fhxct12udnj311x0s3grw.jpg">
+<meta name="twitter:title" content="Cyh Blog">
+<meta name="twitter:description" content="兴趣使然的无名小站">
 
 
 
@@ -126,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/">
+  <link rel="canonical" href="https://www.deepdark.com/archives/2019/page/2/">
 
 
 
 
 
-  <title>利用 Debug Memory Graph 检测内测泄漏 | Cyh Blog</title>
+  <title>归档 | Cyh Blog</title>
   
 
 
@@ -160,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -276,260 +271,76 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-  
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        嗯..! 目前共计 26 篇日志。 继续努力。
+      </span>
 
-  
-  
-  
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Cao Yihao">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar_g.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cyh Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/日常/2019-04-16-第一篇博客/" itemprop="url">
+              
+                <span itemprop="name">自己的第一篇博客</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">利用 Debug Memory Graph 检测内测泄漏</h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T00:00:00+08:00">
-                2017-07-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  509
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和不便，</p>
-<p>在这个 ARC 时代更常见的内存泄露是循环引用导致的 Abandoned memory，Leaks 工具查不出这类内存泄露，应用有限。</p>
-<p>今天介绍一种简单直接的检测内测泄漏的方法：<strong>Debug Memory Graph</strong></p>
-<p>就是这货：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fhxct12udnj311x0s3grw.jpg" alt></p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>我最近的项目中，退出登录后（跳转到登录页），发现首页控制器没有被销毁，依旧能接收通知。</p>
-<p>退出登录代码：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIStoryboard</span> *storyboard = [<span class="built_in">UIStoryboard</span> storyboardWithName:<span class="string">@"Login"</span> bundle:[<span class="built_in">NSBundle</span> mainBundle]];</span><br><span class="line">AppDelegate *appDelegate = (AppDelegate *)[<span class="built_in">UIApplication</span> sharedApplication].delegate;</span><br><span class="line">appDelegate.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:<span class="string">@"LoginVC"</span>];</span><br></pre></td></tr></table></figure>
-<p>很明显发生了循环引用导致的内测泄漏。</p>
-<p>接下来就使用 <strong>Debug Memory Graph</strong> 来查看内测泄漏了。</p>
-<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>首先启动 Xcode 运行程序。</p>
-<h3 id="Debug-Memory-Graph"><a href="#Debug-Memory-Graph" class="headerlink" title="Debug Memory Graph"></a>Debug Memory Graph</h3><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fhxend1a8aj315y0s3gw5.jpg" alt></p>
-<p>点击 Debug Memory Graph 按钮后，可以看到红框内的是当前内存中存在的对象。其中，绿色的就是视图控制器。</p>
-<p>这样，我们随时都可以查看内测中存在的对象，换句话说，就是可以通过观察 Memory Graph 查看内测泄漏。</p>
-<h3 id="调试你的App"><a href="#调试你的App" class="headerlink" title="调试你的App"></a>调试你的App</h3><p>继续运行你的程序</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fhxeuh1np5j30v90kvn03.jpg" alt></p>
-<p>然后对App进行调试、push、pop 操作，再次点击 Debug Memory Graph 按钮。那些该释放而依旧在内测中的 <code>控制器</code> 或 <code>对象</code> 就能一一找出来了。</p>
-<p>接下来，只要进入对应的控制器找到内测泄漏的代码就OK了，一般是Block里引用了 <code>self</code>，改为 <code>weakSelf</code> 就解决了。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define WS(weakSelf) __weak __typeof(&amp;*self)weakSelf = self;</span></span><br><span class="line"></span><br><span class="line">WS(weakSelf)</span><br><span class="line">sView.btnBlock = ^(<span class="built_in">NSInteger</span> idx)&#123;</span><br><span class="line">    [weakSelf.tableView reloadSections:[<span class="built_in">NSIndexSet</span> indexSetWithIndex:idx] withRowAnimation:<span class="built_in">UITableViewRowAnimationAutomatic</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>就这样，利用 Debug Memory Graph，可以简单快速的检测内测泄漏。</p>
-<p>一般由两个对象循环引用的内测泄漏是比较好发现的，如果是由三个及其三个以上的对象形成的大的循环引用，就会比较难排查了。</p>
-
-      
-    </div>
-    
-    
-    
-<div>
-      
-        
-
-      
-</div>
-
-    
-
-    
-
-    
-      <div>
-        <ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    BY
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/" title="利用 Debug Memory Graph 检测内测泄漏">https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-16T00:00:00+08:00" content="2019-04-16">
+          04-16
+        </time>
       </div>
-    
 
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Xcode/" rel="tag"># Xcode</a>
-          
-            <a href="/tags/开发技巧/" rel="tag"># 开发技巧</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/技术/2017-07-24-iTunes-Connect-构建版本不显示/" rel="next" title="iTunes Connect 构建版本不显示">
-                <i class="fa fa-chevron-left"></i> iTunes Connect 构建版本不显示
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/编程/2017-09-11-Swift-4-新特性/" rel="prev" title="Swift 4 新特性">
-                Swift 4 新特性 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
       
+
     </div>
   </div>
+  
+  
+  
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/archives/2019/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
 
 
           </div>
@@ -537,20 +348,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    </div>
-
-  
-
-
 
         </div>
         
@@ -571,17 +368,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -690,22 +478,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行程序"><span class="nav-number">2.1.</span> <span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debug-Memory-Graph"><span class="nav-number">2.2.</span> <span class="nav-text">Debug Memory Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调试你的App"><span class="nav-number">2.3.</span> <span class="nav-text">调试你的App</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -848,10 +620,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -869,18 +637,6 @@
       <script id="dsq-count-scr" src="https://blog-etellfvhpu.disqus.com/count.js" async></script>
     
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/';
-          this.page.identifier = '技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/';
-          this.page.title = '利用 Debug Memory Graph 检测内测泄漏';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://blog-etellfvhpu.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
 
   
@@ -1242,6 +998,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

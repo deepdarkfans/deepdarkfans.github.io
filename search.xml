@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MathJax使用]]></title>
+    <url>%2F%E6%8A%80%E6%9C%AF%2FMathJax%E5%9C%A8Hexo%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[MathJax使用LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。 行中公式可以用如下两种方法表示：＼(数学公式＼) 或 数学公式独立公式可以用如下两种方法表示：＼[数学公式＼] 或 $$$ 数学公式 $$$ 例子：＼$[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}＼]$ 显示 $[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}]$ 如何插入公式大括号1234567891011121314151617181920212223方法一：$$ f(x)=\left\&#123;\begin&#123;aligned&#125;x &amp; = &amp; \cos(t) \\y &amp; = &amp; \sin(t) \\z &amp; = &amp; \frac xy\end&#123;aligned&#125;\right.$$方法二：$$ F^&#123;HLLC&#125;=\left\&#123;\begin&#123;array&#125;&#123;rcl&#125;F_L &amp; &amp; &#123;0 &lt; S_L&#125;\\F^*_L &amp; &amp; &#123;S_L \leq 0 &lt; S_M&#125;\\F^*_R &amp; &amp; &#123;S_M \leq 0 &lt; S_R&#125;\\F_R &amp; &amp; &#123;S_R \leq 0&#125;\end&#123;array&#125; \right. $$方法三:$$f(x)=\begin&#123;cases&#125;0&amp; \text&#123;x=0&#125;\\1&amp; \text&#123;x!=0&#125;\end&#123;cases&#125;$$ 显示如下：方法一：$$ f(x)=\left\{\begin{aligned}x &amp; = &amp; \cos(t) \\y &amp; = &amp; \sin(t) \\z &amp; = &amp; \frac xy\end{aligned}\right. 方法二：$$ F^{HLLC}=\left\{ \begin{array}{rcl} F_L & & {0 < S_L}\\ F^*_L & & {S_L \leq 0 < S_M}\\ F^*_R & & {S_M \leq 0 < S_R}\\ F_R & & {S_R \leq 0} \end{array} \right.方法三：f(x)= \begin{cases} 0& \text{x=0}\\ 1& \text{x!=0} \end{cases} 如何输入上下标^表示上标, _表示下标。如果上下标的内容多于一个字符，要用{}把这些内容括起来当成一个整体。上下标是可以嵌套的，也可以同时使用。 例子：x^{y^z}=(1+{\rm e}^x)^{-2xy^w}显示：$x^{y^z}=(1+{\rm e}^x)^{-2xy^w}$]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>mathjax</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F%E6%97%A5%E5%B8%B8%2FHello-World%2F</url>
     <content type="text"><![CDATA[Hello World]]></content>
@@ -56,17 +68,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[私人用机场推荐]]></title>
-    <url>%2F%E6%8A%80%E6%9C%AF%2F2019-4-29-%E7%A7%81%E4%BA%BA%E7%94%A8%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90%2F</url>
-    <content type="text"><![CDATA[机场推荐最近在google上看到一个比较全面的机场推荐，每个机场还有节点测速，因为还在不断更新，所以就直接放链接了 毒药机场推荐 注：本篇转载文章作者与本人毫无瓜葛，在现实生活中未有任何接触！！！]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>个人笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Linux解压中文密码的压缩文件]]></title>
     <url>%2F%E6%8A%80%E6%9C%AF%2F2019-4-29-Linux%E8%A7%A3%E5%8E%8B%E4%B8%AD%E6%96%87%E5%AF%86%E7%A0%81%E7%9A%84%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[Linux解压中文密码的压缩文件最近遇到个小问题，我在ubuntu下解压某群友发的福利压缩文件（解压密码为中文）时，发现总是提示密码错误。 我第一时间想到了可能是linux和windows编码不同的区别。windows是gbk和utf-8，llinux是标准的utf-8。 导致两个系统的中文不通用。因为我日常使用ubuntu，不会为这点福利就下个windows，所以在网上找来找去，最后在简书上找到了答案。 下面就以unzip命令演示一哈： 1unzip -P &quot;$(echo -n 琴叶酱|iconv -f utf-8 -t gbk)&quot; 某个憨批的桌面文件？.zip 转码部分为1echo -n 琴叶酱|iconv -f utf-8 -t gbk 密码是琴叶酱，-f是from，-t是to。，语句意思为将echo输出的字符串从utf-8转码为gbk。 如果是从windows解压linux加密的压缩文件的话，将utf-8和gbk调换位置即可。]]></content>
@@ -75,6 +76,17 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[私人用机场推荐]]></title>
+    <url>%2F%E6%8A%80%E6%9C%AF%2F2019-4-29-%E7%A7%81%E4%BA%BA%E7%94%A8%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90%2F</url>
+    <content type="text"><![CDATA[机场推荐最近在google上看到一个比较全面的机场推荐，每个机场还有节点测速，因为还在不断更新，所以就直接放链接了 毒药机场推荐 注：本篇转载文章作者与本人毫无瓜葛，在现实生活中未有任何接触！！！]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>个人笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -89,17 +101,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[自己的第一篇博客]]></title>
-    <url>%2F%E6%97%A5%E5%B8%B8%2F2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[先test一哈马上毕业，先搞个代码块1print(&quot;hello world&quot;) 再搞个代码行完事了，剩下等有时间再写主要搞机器学习和网络安全]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[试一下插入图片]]></title>
     <url>%2F%E6%97%A5%E5%B8%B8%2F2019-04-16-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%2F</url>
     <content type="text"><![CDATA[试一下Markdown的图片插入，用阿里云插入的，picgo用不了，有点麻烦，要是可以直接复制url就好2]]></content>
@@ -108,6 +109,17 @@
       </categories>
       <tags>
         <tag>Daily</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[自己的第一篇博客]]></title>
+    <url>%2F%E6%97%A5%E5%B8%B8%2F2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[先test一哈马上毕业，先搞个代码块1print(&quot;hello world&quot;) 再搞个代码行完事了，剩下等有时间再写主要搞机器学习和网络安全]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
