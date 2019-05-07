@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.deepdark.com/"/>
-  <updated>2019-05-07T12:05:33.260Z</updated>
+  <updated>2019-05-07T12:09:05.226Z</updated>
   <id>https://www.deepdark.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/MathJax%E5%9C%A8Hexo%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>https://www.deepdark.com/技术/MathJax在Hexo中的使用/</id>
     <published>2019-05-06T16:00:00.000Z</published>
-    <updated>2019-05-07T12:05:33.260Z</updated>
+    <updated>2019-05-07T12:09:05.226Z</updated>
     
     <summary type="html">
     
@@ -112,30 +112,6 @@
   </entry>
   
   <entry>
-    <title>Ubuntu配置PPPOE拨号上网</title>
-    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-30-ubuntu%E8%AE%BE%E7%BD%AEpppoe%E6%8B%A8%E5%8F%B7%E4%B8%8A%E7%BD%91/"/>
-    <id>https://www.deepdark.com/技术/2019-4-30-ubuntu设置pppoe拨号上网/</id>
-    <published>2019-04-29T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.158Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;PPPOE拨号上网&quot;&gt;&lt;a href=&quot;#PPPOE拨号上网&quot; class=&quot;headerlink&quot; title=&quot;PPPOE拨号上网&quot;&gt;&lt;/a&gt;PPPOE拨号上网&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.ne
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Linux" scheme="https://www.deepdark.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Github的图床制作</title>
     <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-04-30-github%E5%9B%BE%E5%BA%8A%E5%88%B6%E4%BD%9C/"/>
     <id>https://www.deepdark.com/技术/2019-04-30-github图床制作/</id>
@@ -156,6 +132,30 @@
     
     
       <category term="Markdown" scheme="https://www.deepdark.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu配置PPPOE拨号上网</title>
+    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-30-ubuntu%E8%AE%BE%E7%BD%AEpppoe%E6%8B%A8%E5%8F%B7%E4%B8%8A%E7%BD%91/"/>
+    <id>https://www.deepdark.com/技术/2019-4-30-ubuntu设置pppoe拨号上网/</id>
+    <published>2019-04-29T16:00:00.000Z</published>
+    <updated>2019-05-07T09:14:47.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;PPPOE拨号上网&quot;&gt;&lt;a href=&quot;#PPPOE拨号上网&quot; class=&quot;headerlink&quot; title=&quot;PPPOE拨号上网&quot;&gt;&lt;/a&gt;PPPOE拨号上网&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.ne
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Linux" scheme="https://www.deepdark.com/tags/Linux/"/>
     
   </entry>
   
@@ -231,29 +231,6 @@
   </entry>
   
   <entry>
-    <title>自己的第一篇博客</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://www.deepdark.com/日常/2019-04-16-第一篇博客/</id>
-    <published>2019-04-15T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.158Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;先test一哈&quot;&gt;&lt;a href=&quot;#先test一哈&quot; class=&quot;headerlink&quot; title=&quot;先test一哈&quot;&gt;&lt;/a&gt;&lt;strong&gt;先test一哈&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;马上毕业，先搞个代码块&lt;br&gt;&lt;figure class=&quot;hig
-      
-    
-    </summary>
-    
-      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="日常" scheme="https://www.deepdark.com/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>试一下插入图片</title>
     <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     <id>https://www.deepdark.com/日常/2019-04-16-插入图片/</id>
@@ -273,6 +250,29 @@
     
     
       <category term="Daily" scheme="https://www.deepdark.com/tags/Daily/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己的第一篇博客</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://www.deepdark.com/日常/2019-04-16-第一篇博客/</id>
+    <published>2019-04-15T16:00:00.000Z</published>
+    <updated>2019-05-07T09:14:47.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;先test一哈&quot;&gt;&lt;a href=&quot;#先test一哈&quot; class=&quot;headerlink&quot; title=&quot;先test一哈&quot;&gt;&lt;/a&gt;&lt;strong&gt;先test一哈&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;马上毕业，先搞个代码块&lt;br&gt;&lt;figure class=&quot;hig
+      
+    
+    </summary>
+    
+      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="日常" scheme="https://www.deepdark.com/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
@@ -476,17 +476,17 @@
   </entry>
   
   <entry>
-    <title>「体能训练理论」之动力链</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E5%8A%A8%E5%8A%9B%E9%93%BE/"/>
-    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之动力链/</id>
+    <title>「体能训练理论」之金字塔</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E9%87%91%E5%AD%97%E5%A1%94/"/>
+    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之金字塔/</id>
     <published>2017-07-09T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.881Z</updated>
+    <updated>2019-05-07T09:14:47.665Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;与其说体能训练是一种行为，不如说体能训练是一种程序。只要符合逻辑，就可以自由组合。&lt;br&gt; 那么体能训练的逻辑是什么？我们将之总结为：&lt;a 
+        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;体能，人体基础运动能力的统称，人体的本质属性，它支撑着日常生活工作的需要，也支撑着运动技战术的表现。 体能思路，是指导我们设计实施体能训练的
       
     
     </summary>
