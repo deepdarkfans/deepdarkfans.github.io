@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.deepdark.com/"/>
-  <updated>2019-05-20T05:35:18.798Z</updated>
+  <updated>2019-05-20T05:40:58.334Z</updated>
   <id>https://www.deepdark.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>MathJax使用</title>
     <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/MathJax%E5%9C%A8Hexo%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>https://www.deepdark.com/技术/MathJax在Hexo中的使用/</id>
-    <published>2019-05-20T05:35:18.798Z</published>
-    <updated>2019-05-20T05:35:18.798Z</updated>
+    <published>2019-05-20T05:40:58.334Z</published>
+    <updated>2019-05-20T05:40:58.334Z</updated>
     
     <summary type="html">
     
@@ -451,17 +451,17 @@
   </entry>
   
   <entry>
-    <title>「体能训练理论」之动力链</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E5%8A%A8%E5%8A%9B%E9%93%BE/"/>
-    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之动力链/</id>
+    <title>「体能训练理论」之功能性</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E5%8A%9F%E8%83%BD%E6%80%A7/"/>
+    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之功能性/</id>
     <published>2017-07-09T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.881Z</updated>
+    <updated>2019-05-07T09:14:47.665Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;与其说体能训练是一种行为，不如说体能训练是一种程序。只要符合逻辑，就可以自由组合。&lt;br&gt; 那么体能训练的逻辑是什么？我们将之总结为：&lt;a 
+        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;体能训练是一种开源的程序它所依仗的并不是固有的方法手段，而是能够贯穿始终的逻辑，它是一种指导实践的思维方式，我们管它叫“体能思路”。&lt;/p&gt;
       
     
     </summary>
@@ -476,17 +476,17 @@
   </entry>
   
   <entry>
-    <title>「体能训练理论」之金字塔</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E9%87%91%E5%AD%97%E5%A1%94/"/>
-    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之金字塔/</id>
+    <title>「体能训练理论」之动力链</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E5%8A%A8%E5%8A%9B%E9%93%BE/"/>
+    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之动力链/</id>
     <published>2017-07-09T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.665Z</updated>
+    <updated>2019-05-07T09:14:47.881Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;体能，人体基础运动能力的统称，人体的本质属性，它支撑着日常生活工作的需要，也支撑着运动技战术的表现。 体能思路，是指导我们设计实施体能训练的
+        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;与其说体能训练是一种行为，不如说体能训练是一种程序。只要符合逻辑，就可以自由组合。&lt;br&gt; 那么体能训练的逻辑是什么？我们将之总结为：&lt;a 
       
     
     </summary>
