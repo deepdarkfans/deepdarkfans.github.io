@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.deepdark.com/"/>
-  <updated>2019-05-20T05:44:31.127Z</updated>
+  <updated>2019-05-20T05:52:31.743Z</updated>
   <id>https://www.deepdark.com/</id>
   
   <author>
@@ -20,16 +20,18 @@
     <title>MathJax使用</title>
     <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/MathJax%E5%9C%A8Hexo%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>https://www.deepdark.com/技术/MathJax在Hexo中的使用/</id>
-    <published>2019-05-20T05:44:31.127Z</published>
-    <updated>2019-05-20T05:44:31.127Z</updated>
+    <published>2019-05-20T05:52:31.743Z</published>
+    <updated>2019-05-20T05:52:31.743Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;MathJax使用&quot;&gt;&lt;a href=&quot;#MathJax使用&quot; class=&quot;headerlink&quot; title=&quot;MathJax使用&quot;&gt;&lt;/a&gt;MathJax使用&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;此文转载于&lt;a href=&quot;https://www.zyb
-      
+      &lt;h1 id=&quot;MathJax使用&quot;&gt;&lt;a href=&quot;#MathJax使用&quot; class=&quot;headerlink&quot; title=&quot;MathJax使用&quot;&gt;&lt;/a&gt;MathJax使用&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;此文转载于&lt;a href=&quot;https://www.zybuluo.com/knight/note/96093&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;作业部落&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。&lt;/p&gt;
+&lt;p&gt;行中公式可以用如下两种方法表示：&lt;br&gt;&lt;code&gt;＼(数学公式＼)&lt;/code&gt;　或　&lt;code&gt;$数学公式 $&lt;/code&gt;&lt;br&gt;独立公式可以用如下两种方法表示：&lt;br&gt;&lt;code&gt;＼[数学公式＼]&lt;/code&gt;　或　&lt;code&gt;$$ 数学公式 $$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例子：&lt;code&gt;＼$[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}＼]$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;显示 $[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}]$&lt;br&gt;
     
     </summary>
     
@@ -69,15 +71,20 @@
     <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-05-03-V2Ray%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/"/>
     <id>https://www.deepdark.com/技术/2019-05-03-V2Ray搭建详细图文教程/</id>
     <published>2019-05-02T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.159Z</updated>
+    <updated>2019-05-20T05:53:12.976Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;转自github上的&lt;a href=&quot;https://github.com/233boy/v2ray/wiki/V2Ray%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E6%95%99
-      
+      &lt;blockquote&gt;
+&lt;p&gt;转自github上的&lt;a href=&quot;https://github.com/233boy/v2ray/wiki/V2Ray%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;233boy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;搭建 V2Ray 看这篇文章就够了！这是完完全全为小白准备的 V2Ray 搭建教程，详细的图文教程确保你可以百分百成功搭建 V2Ray 使用。&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;此 V2Ray 教程完完全全是为小白准备的，从购买 VPS 到使用 SSH 登录并使用 V2Ray 一键安装脚本配置 V2Ray，详细的图文教程确保你可以百分百成功搭建 V2Ray 使用，哪怕你只是一个小白。&lt;br&gt;
+由于 V2Ray 的配置对于小白来说是非常不友好的，所以此 V2Ray 教程的 V2Ray 服务器端配置将会使用我本人撰写的 &lt;a href=&quot;https://github.com/233boy/v2ray/wiki/V2Ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;V2Ray 一键安装脚本&lt;/a&gt;，这是一个对小白友好的 V2Ray 一键脚本，简化 V2Ray 安装和部署，并且自动开启 BBR 优化，当然你也可以手动打开 BBR 来优化 V2Ray，也可以选择使用锐速来 优化 V2Ray。&lt;/p&gt;
     
     </summary>
     
@@ -116,15 +123,12 @@
     <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-30-ubuntu%E8%AE%BE%E7%BD%AEpppoe%E6%8B%A8%E5%8F%B7%E4%B8%8A%E7%BD%91/"/>
     <id>https://www.deepdark.com/技术/2019-4-30-ubuntu设置pppoe拨号上网/</id>
     <published>2019-04-29T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.158Z</updated>
+    <updated>2019-05-20T05:53:44.685Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;PPPOE拨号上网&quot;&gt;&lt;a href=&quot;#PPPOE拨号上网&quot; class=&quot;headerlink&quot; title=&quot;PPPOE拨号上网&quot;&gt;&lt;/a&gt;PPPOE拨号上网&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.ne
-      
+      &lt;h1 id=&quot;PPPOE拨号上网&quot;&gt;&lt;a href=&quot;#PPPOE拨号上网&quot; class=&quot;headerlink&quot; title=&quot;PPPOE拨号上网&quot;&gt;&lt;/a&gt;PPPOE拨号上网&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/selous/article/details/55520765&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文链接&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -211,15 +215,17 @@
     <link href="https://www.deepdark.com/%E7%BC%96%E7%A8%8B/2019-4-28-Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
     <id>https://www.deepdark.com/编程/2019-4-28-Markdown基本语法/</id>
     <published>2019-04-27T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.158Z</updated>
+    <updated>2019-05-20T05:54:17.657Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;Markdown-基本语法&quot;&gt;&lt;a href=&quot;#Markdown-基本语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown 基本语法&quot;&gt;&lt;/a&gt;Markdown 基本语法&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;转载自&lt;a href=&quot;h
-      
+      &lt;h1 id=&quot;Markdown-基本语法&quot;&gt;&lt;a href=&quot;#Markdown-基本语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown 基本语法&quot;&gt;&lt;/a&gt;Markdown 基本语法&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;转载自&lt;a href=&quot;https://www.jianshu.com/p/191d1e21f7ed&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;简书&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
+&lt;p&gt;相比WYSIWYG编辑器&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优点:&lt;/strong&gt;&lt;br&gt;1、因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。&lt;br&gt;2、操作简单。比如:WYSIWYG编辑时标记个标题，先选中内容，再点击导航栏的标题按钮，选择几级标题。要三个步骤。而Markdown只需要在标题内容前加#即可&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;br&gt;1、需要记一些语法（当然，是很简单。五分钟学会）。&lt;br&gt;2、有些平台不支持Markdown编辑模式。&lt;br&gt;
     
     </summary>
     
@@ -451,17 +457,17 @@
   </entry>
   
   <entry>
-    <title>「体能训练理论」之功能性</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E5%8A%9F%E8%83%BD%E6%80%A7/"/>
-    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之功能性/</id>
+    <title>「体能训练理论」之动力链</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E5%8A%A8%E5%8A%9B%E9%93%BE/"/>
+    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之动力链/</id>
     <published>2017-07-09T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.665Z</updated>
+    <updated>2019-05-07T09:14:47.881Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;体能训练是一种开源的程序它所依仗的并不是固有的方法手段，而是能够贯穿始终的逻辑，它是一种指导实践的思维方式，我们管它叫“体能思路”。&lt;/p&gt;
+        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;与其说体能训练是一种行为，不如说体能训练是一种程序。只要符合逻辑，就可以自由组合。&lt;br&gt; 那么体能训练的逻辑是什么？我们将之总结为：&lt;a 
       
     
     </summary>
@@ -476,17 +482,17 @@
   </entry>
   
   <entry>
-    <title>「体能训练理论」之动力链</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E5%8A%A8%E5%8A%9B%E9%93%BE/"/>
-    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之动力链/</id>
+    <title>「体能训练理论」之金字塔</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E9%87%91%E5%AD%97%E5%A1%94/"/>
+    <id>https://www.deepdark.com/日常/2017-07-10-「体能训练理论」之金字塔/</id>
     <published>2017-07-09T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.881Z</updated>
+    <updated>2019-05-07T09:14:47.665Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;与其说体能训练是一种行为，不如说体能训练是一种程序。只要符合逻辑，就可以自由组合。&lt;br&gt; 那么体能训练的逻辑是什么？我们将之总结为：&lt;a 
+        &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;体能，人体基础运动能力的统称，人体的本质属性，它支撑着日常生活工作的需要，也支撑着运动技战术的表现。 体能思路，是指导我们设计实施体能训练的
       
     
     </summary>
