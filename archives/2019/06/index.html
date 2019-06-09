@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="iOS,Swift,IBInspectable,">
+  <meta name="keywords" content="Blog, Linux">
 
 
 
@@ -81,24 +81,17 @@
 
 
 
-<meta name="description" content="本文首次发布于 BY Blog, 作者 @柏荧(BY) ,转载请保留原文链接.  前言通过 IB 设置 控件 的属性非常的方便。  但是缺点也很明显，那就是有一些属性没有暴露在 IB 的设置面板中。这时候就要使用 @IBInspectable 在 IB 面板中添加这些没有的属性。 关于在 OC 中使用 IBInspectable 可以看一下我的 这篇文章 正文在项目中最常遇到的情况是为 view">
-<meta name="keywords" content="iOS,Swift,IBInspectable">
-<meta property="og:type" content="article">
-<meta property="og:title" content="在 Swift 中使用 IBInspectable">
-<meta property="og:url" content="https://www.deepdark.com/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/index.html">
+<meta name="description" content="兴趣使然的无名小站">
+<meta name="keywords" content="blog,machine learning,linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cyh Blog">
+<meta property="og:url" content="https://www.deepdark.com/archives/2019/06/index.html">
 <meta property="og:site_name" content="Cyh Blog">
-<meta property="og:description" content="本文首次发布于 BY Blog, 作者 @柏荧(BY) ,转载请保留原文链接.  前言通过 IB 设置 控件 的属性非常的方便。  但是缺点也很明显，那就是有一些属性没有暴露在 IB 的设置面板中。这时候就要使用 @IBInspectable 在 IB 面板中添加这些没有的属性。 关于在 OC 中使用 IBInspectable 可以看一下我的 这篇文章 正文在项目中最常遇到的情况是为 view">
+<meta property="og:description" content="兴趣使然的无名小站">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1ff9fpog0vrj30ho084t9m.jpg">
-<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tNc79gy1ff9h5afhv2j30f803ajri.jpg">
-<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1ff9h70z922j30ag061wf7.jpg">
-<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tNc79gy1ff9hs6z5q1j30fr03vweu.jpg">
-<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tNc79gy1ff9h94um01j30aj01vjre.jpg">
-<meta property="og:updated_time" content="2019-04-16T09:59:25.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 Swift 中使用 IBInspectable">
-<meta name="twitter:description" content="本文首次发布于 BY Blog, 作者 @柏荧(BY) ,转载请保留原文链接.  前言通过 IB 设置 控件 的属性非常的方便。  但是缺点也很明显，那就是有一些属性没有暴露在 IB 的设置面板中。这时候就要使用 @IBInspectable 在 IB 面板中添加这些没有的属性。 关于在 OC 中使用 IBInspectable 可以看一下我的 这篇文章 正文在项目中最常遇到的情况是为 view">
-<meta name="twitter:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1ff9fpog0vrj30ho084t9m.jpg">
+<meta name="twitter:title" content="Cyh Blog">
+<meta name="twitter:description" content="兴趣使然的无名小站">
 
 
 
@@ -128,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://www.deepdark.com/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/">
+  <link rel="canonical" href="https://www.deepdark.com/archives/2019/06/">
 
 
 
 
 
-  <title>在 Swift 中使用 IBInspectable | Cyh Blog</title>
+  <title>归档 | Cyh Blog</title>
   
 
 
@@ -162,7 +155,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 <a href="https://github.com/deepdarkfans" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,245 +271,72 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-  
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        嗯..! 目前共计 29 篇日志。 继续努力。
+      </span>
 
-  
-  
-  
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Cao Yihao">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar_g.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cyh Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/机器学习/Python机器学习（三）/" itemprop="url">
+              
+                <span itemprop="name">Python机器学习（三）</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">在 Swift 中使用 IBInspectable</h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T00:00:00+08:00">
-                2017-05-05
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-06-09T14:44:35+08:00" content="2019-06-09">
+          06-09
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  548
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <blockquote>
-<p>本文首次发布于 <a href="http://qiubaiying.github.io" target="_blank" rel="noopener">BY Blog</a>, 作者 <a href="http://github.com/qiubaiying" target="_blank" rel="noopener">@柏荧(BY)</a> ,转载请保留原文链接.</p>
-</blockquote>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>通过 IB 设置 控件 的属性非常的方便。</p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNc79gy1ff9fpog0vrj30ho084t9m.jpg" alt></p>
-<p>但是缺点也很明显，那就是有一些属性没有暴露在 IB 的设置面板中。这时候就要使用 <code>@IBInspectable</code> 在 IB 面板中添加这些没有的属性。</p>
-<p>关于在 OC 中使用 <code>IBInspectable</code> 可以看一下我的 <a href="http://qiubaiying.top/2016/12/01/%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0%E5%9C%86%E8%A7%92%E5%92%8C%E6%8F%8F%E8%BE%B9/#高级" target="_blank" rel="noopener">这篇文章</a></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>在项目中最常遇到的情况是为 view 设置圆角、描边，以及为 文本控件 添加本地化字符串。</p>
-<h2 id="圆角、描边"><a href="#圆角、描边" class="headerlink" title="圆角、描边"></a>圆角、描边</h2><p>先来看看设置圆角、描边</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIView</span> </span>&#123;</span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> cornerRadius: <span class="type">CGFloat</span> &#123;</span><br><span class="line">        <span class="keyword">get</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> layer.cornerRadius</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            layer.cornerRadius = newValue</span><br><span class="line">            layer.masksToBounds = newValue &gt; <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> borderWidth: <span class="type">CGFloat</span> &#123;</span><br><span class="line">        <span class="keyword">get</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> layer.borderWidth</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            layer.borderWidth = newValue &gt; <span class="number">0</span> ? newValue : <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> borderColor: <span class="type">UIColor</span> &#123;</span><br><span class="line">        <span class="keyword">get</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="type">UIColor</span>(cgColor: layer.borderColor!)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            layer.borderColor = newValue.cgColor</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>添加完成就可以在 IB 中设置 view 的这些属性了</p>
-<p><img src="https://ww4.sinaimg.cn/large/006tNc79gy1ff9h5afhv2j30f803ajri.jpg" alt></p>
-<p>运行效果</p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNc79gy1ff9h70z922j30ag061wf7.jpg" alt></p>
-<h2 id="利用-IBDesignable-在-IB-中实时显示-IBInspectable-的样式"><a href="#利用-IBDesignable-在-IB-中实时显示-IBInspectable-的样式" class="headerlink" title="利用 @IBDesignable 在 IB 中实时显示 @IBInspectable 的样式"></a>利用 @IBDesignable 在 IB 中实时显示 @IBInspectable 的样式</h2><p>创建一个新的 class 继承 <code>UIView</code> ，并且使用 <code>@IBDesignable</code> 声明</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="meta">@IBDesignable</span> <span class="class"><span class="keyword">class</span> <span class="title">IBDesignableView</span>: <span class="title">UIView</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在 IB 中，选择 view 的 class 为 我们新建的 <code>IBDesignableView</code></p>
-<p><img src="https://ww1.sinaimg.cn/large/006tNc79gy1ff9hs6z5q1j30fr03vweu.jpg" alt></p>
-<p>这样在 IB 调整属性时，这些属性的变化就会实时显示在 IB 中。</p>
-<h2 id="本地化字符串"><a href="#本地化字符串" class="headerlink" title="本地化字符串"></a>本地化字符串</h2><p>本地化字符串的解决方法和上面的添加圆角一样</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UILabel</span> </span>&#123;</span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> localizedKey: <span class="type">String?</span> &#123;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> newValue = newValue <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">            text = <span class="type">NSLocalizedString</span>(newValue, comment: <span class="string">""</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">get</span> &#123; <span class="keyword">return</span> text &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIButton</span> </span>&#123;</span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> localizedKey: <span class="type">String?</span> &#123;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> newValue = newValue <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">            setTitle(<span class="type">NSLocalizedString</span>(newValue, comment: <span class="string">""</span>), <span class="keyword">for</span>: .normal)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">get</span> &#123; <span class="keyword">return</span> titleLabel?.text &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UITextField</span> </span>&#123;</span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> localizedKey: <span class="type">String?</span> &#123;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> newValue = newValue <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">            placeholder = <span class="type">NSLocalizedString</span>(newValue, comment: <span class="string">""</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">get</span> &#123; <span class="keyword">return</span> placeholder &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样，在 IB 中我们就可以利用对应类型的 Localized Key 来直接设置本地化字符串了：</p>
-<p><img src="https://ww1.sinaimg.cn/large/006tNc79gy1ff9h94um01j30aj01vjre.jpg" alt></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p><code>IBInspectable</code> 可以使用这些的类型</p>
-<ul>
-<li><code>Int</code></li>
-<li><code>CGFloat</code></li>
-<li><code>Double</code></li>
-<li><code>String</code></li>
-<li><code>Bool</code></li>
-<li><code>CGPoint</code></li>
-<li><code>CGSize</code></li>
-<li><code>CGRect</code></li>
-<li><code>UIColor</code></li>
-<li><code>UIImage</code></li>
-</ul>
-<p>合理的使用<code>@IBInspectable</code> 能减少很多的模板代码，提高我们的开发效率。</p>
-<blockquote>
-<p>参考</p>
-<ul>
-<li><a href="https://onevcat.com/2017/04/storyboard-argue/" target="_blank" rel="noopener">《再看关于 Storyboard 的一些争论》</a></li>
-<li><a href="https://medium.com/@Anantha1992/ibdesignable-and-ibinspectable-in-swift-3-702d7dd00ca" target="_blank" rel="noopener">《@IBDesignable and @IBInspectable in Swift 3》</a></li>
-</ul>
-</blockquote>
-
-      
-    </div>
-    
-    
-    
-<div>
-      
-        
-
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/iOS/" rel="tag"># iOS</a>
-          
-            <a href="/tags/Swift/" rel="tag"># Swift</a>
-          
-            <a href="/tags/IBInspectable/" rel="tag"># IBInspectable</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/uncategorized/2017-05-04-R.swift-的使用/" rel="next" title="R.swift 的使用">
-                <i class="fa fa-chevron-left"></i> R.swift 的使用
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/uncategorized/2017-06-19-快速配置zsh/" rel="prev" title="快速配置zsh">
-                快速配置zsh <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
       
+
     </div>
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -524,20 +344,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    </div>
-
-  
-
-
 
         </div>
         
@@ -558,17 +364,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -677,22 +474,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#圆角、描边"><span class="nav-number">2.1.</span> <span class="nav-text">圆角、描边</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-IBDesignable-在-IB-中实时显示-IBInspectable-的样式"><span class="nav-number">2.2.</span> <span class="nav-text">利用 @IBDesignable 在 IB 中实时显示 @IBInspectable 的样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化字符串"><span class="nav-number">2.3.</span> <span class="nav-text">本地化字符串</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -836,10 +617,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -857,18 +634,6 @@
       <script id="dsq-count-scr" src="https://blog-etellfvhpu.disqus.com/count.js" async></script>
     
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://www.deepdark.com/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/';
-          this.page.identifier = 'uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/';
-          this.page.title = '在 Swift 中使用 IBInspectable';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://blog-etellfvhpu.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
 
   
@@ -1214,7 +979,7 @@
         onPopupClose();
       }
     });
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
 
 
 
@@ -1230,6 +995,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 

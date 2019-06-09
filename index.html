@@ -286,6 +286,249 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/机器学习/Python机器学习（三）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cao Yihao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar_g.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyh Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/机器学习/Python机器学习（三）/" itemprop="url">Python机器学习（三）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-09T14:44:35+08:00">
+                2019-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/机器学习/Python机器学习（三）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="机器学习/Python机器学习（三）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>中心极限定理部分转载自<a href="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/" target="_blank" rel="noopener">朱曦炽个人博客</a>，假设检测部分转载维基百科等</p>
+</blockquote>
+<h2 id="Hypothesis-Testing（假设检测）"><a href="#Hypothesis-Testing（假设检测）" class="headerlink" title="Hypothesis Testing（假设检测）"></a>Hypothesis Testing（假设检测）</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><strong>假设检验</strong>是推论统计中用于检验统计假设的一种方法。﻿而“统计假设”是可通过观察一组随机变量的模型进行检验的科学假说。[1]一旦能估计未知参数，就会希望根据结果对未知的真正参数值做出适当的推论。</p>
+<p>统计上对参数的假设，就是对一个或多个参数的论述。而其中欲检验其正确性的为零假设（null hypothesis），零假设通常由研究者决定，反映研究者对未知参数的看法。相对于零假设的其他有关参数之论述是备择假设（alternative hypothesis），它通常反应了执行检定的研究者对参数可能数值的另一种（对立的）看法（换句话说，备择假设通常才是研究者最想知道的）。</p>
+<p>假设检验的种类包括：t检验，Z检验，卡方检验，F检验等等。</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>假设检验的过程，可以用法庭的审理来说明。先想像现在法庭上有一名被告，假设该被告是清白的，而检察官必须要提出足够的证据去证明被告的确有罪。 在证明被告有罪前，被告是被假设为清白的。</p>
+<ul>
+<li>假设被告清白的假设，就相当于零假设（null hypothesis）。</li>
+<li>假设被告有罪的假设，则是备择假设（alternative hypothesis）。</li>
+</ul>
+<p>而检察官提出的证据，是否足以确定该被告有罪，则要经过检验。 这样子的检验过程就相当于用T检验或Z检验去检视研究者所搜集到的统计资料。</p>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>在统计学的文献中，假设检验发挥了重要作用。假设检验大致有如下步骤：</p>
+<ol>
+<li>最初研究假设为真相不明。</li>
+<li>第一步是提出相关的零假设和对立假设。这是很重要的，因为错误陈述假设会导致后面的过程变得混乱。</li>
+<li>第二步是考虑检验中对样本做出的统计假设；例如，关于独立性的假设或关于观测数据的分布的形式的假设。这个步骤也同样重要，因为无效的假设将意味着试验的结果是无效的。</li>
+<li>决定哪个检测是合适的，并确定相关检验统计量 T。</li>
+<li>在零假设下推导检验统计量的分布。在标准情况下应该会得出一个熟知的结果。比如检验统计量可能会符合学生t-分布或正态分布。</li>
+<li>选择一个显著性水平 (α)，若低于这个概率阈值，就会拒绝零假设。最常用的是 5% 和 1%。</li>
+<li>根据在零假设成立时的检验统计量T分布，找到数值最接近备择假设，且几率为显著性水平 (α)的区域，此区域称为“拒绝域”，意思是在零假设成立的前提下，落在拒绝域的几率只有α。</li>
+<li>针对检验统计量T，根据样本计算其估计值tobs。</li>
+<li>若估计值tobs未落在“拒绝域”，接受零假设。若估计值tobs落在“拒绝域”，拒绝零假设，接受对立假设。</li>
+</ol>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>淑女品茶是一个有关假设检验的著名例子[2]，费雪的一个女同事声称可以判断在奶茶中，是先加入茶还是先加入牛奶。费雪提议给她八杯奶茶，四杯先加茶，四杯先加牛奶，但随机排列，而女同事要说出这八杯奶茶中，哪些先加牛奶，哪些先加茶，检验统计量是确认正确的次数。零假设是女同事无法判断奶茶中的茶先加入还是牛奶先加入，对立假设为女同事有此能力。</p>
+<p>若单纯以几率考虑（即女同事没有判断的能力）下，八杯都正确的几率为1/70，约1.4%，因此“拒绝域”为八杯的结果都正确。而测试结果为女同事八杯的结果都正确，在统计上是相当显著的的结果。</p>
+<h2 id="Central-Limit-Theorem（中心检测定理）"><a href="#Central-Limit-Theorem（中心检测定理）" class="headerlink" title="Central Limit Theorem（中心检测定理）"></a>Central Limit Theorem（中心检测定理）</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><blockquote>
+<p>中心极限定理指的是给定一个任意分布的总体。我每次从这些总体中随机抽取 n 个抽样，一共抽 m 次。 然后把这 m 组抽样分别求出平均值。 这些平均值的分布接近正态分布。</p>
+</blockquote>
+<p>举个例子</p>
+<p>现在我们要统计全国的人的体重，看看我国平均体重是多少。当然，我们把全国所有人的体重都调查一遍是不现实的。所以我们打算一共调查1000组，每组50个人。 然后，我们求出第一组的体重平均值、第二组的体重平均值，一直到最后一组的体重平均值。中心极限定理说：这些平均值是呈现正态分布的。并且，随着组数的增加，效果会越好。 最后，当我们再把1000组算出来的平均值加起来取个平均值，这个平均值会接近全国平均体重。</p>
+<p>其中要注意的几点：</p>
+<ol>
+<li><p>总体本身的分布不要求正态分布<br>上面的例子中，人的体重是正态分布的。但如果我们的例子是掷一个骰子（平均分布），最后每组的平均值也会组成一个正态分布。（神奇！）</p>
+</li>
+<li><p>样本每组要足够大，但也不需要太大<br>取样本的时候，一般认为，每组大于等于30个，即可让中心极限定理发挥作用。</p>
+</li>
+</ol>
+<p>话不多说，我们现在来一步步看到中心极限定理是如何起作用的。</p>
+<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><h4 id="生成数据"><a href="#生成数据" class="headerlink" title="生成数据"></a>生成数据</h4><p>假设我们现在观测一个人掷骰子。这个骰子是公平的，也就是说掷出1~6的概率都是相同的：1/6。他掷了一万次。我们用python来模拟投掷的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np </span><br><span class="line">random_data = np.random.randint(1, 7, 10000)</span><br><span class="line">print random_data.mean() # 打印平均值</span><br><span class="line">print random_data.std()  # 打印标准差</span><br></pre></td></tr></table></figure>
+<p>生成出来的平均值：3.4927 （每次重新生成都会略有不同）<br>生成出来的标准差：1.7079</p>
+<p>平均值接近3.5很好理解。 因为每次掷出来的结果是1、2、3、4、5、6。 每个结果的概率是1/6。所以加权平均值就是3.5。</p>
+<h4 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h4><p>我们把生成的数据用直方图画出来直观地感受一下：</p>
+<p><img src="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/01.png" alt></p>
+<h4 id="抽一组样本"><a href="#抽一组样本" class="headerlink" title="抽一组样本"></a>抽一组样本</h4><p>我们接下来随便先拿一组抽样，手动算一下。例如我们先从生成的数据中随机抽取10个数字：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sample1 = []</span><br><span class="line">for i in range(0, 10):</span><br><span class="line">    sample1.append(random_data[int(np.random.random() * len(random_data))])</span><br><span class="line">    </span><br><span class="line">print sample1 # 打印出来</span><br></pre></td></tr></table></figure>
+<p>这10个数字的结果是： [3, 4, 3, 6, 1, 6, 6, 3, 4, 4]<br>平均值：4.0<br>标准差：1.54</p>
+<p>可以看到，我们只抽10个的时候，样本的平均值（4.0）会距离总体的平均值（3.5）有所偏差。<br>有时候我们运气不好，抽出来的数字可能偏差很大，比如抽出来10个数字都是6。那平均值就是6了。 为什么会出现都是6的情况呢？因为我比较6…哦不是，因为这就是随机的魅力呀！</p>
+<h4 id="验证定理"><a href="#验证定理" class="headerlink" title="验证定理"></a>验证定理</h4><p>我们让中心极限定理发挥作用。现在我们抽取1000组，每组50个。<br>我们把每组的平均值都算出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">samples = []</span><br><span class="line">samples_mean = []</span><br><span class="line">samples_std = []</span><br><span class="line"></span><br><span class="line">for i in range(0, 1000):</span><br><span class="line">    sample = []</span><br><span class="line">    for j in range(0, 50):</span><br><span class="line">        sample.append(random_data[int(np.random.random() * len(random_data))])</span><br><span class="line">    sample_np = np.array(sample)</span><br><span class="line">    samples_mean.append(sample_np.mean())</span><br><span class="line">    samples_std.append(sample_np.std())</span><br><span class="line">    samples.append(sample_np)</span><br><span class="line">    </span><br><span class="line">samples_mean_np = np.array(samples_mean)</span><br><span class="line">samples_std_np = np.array(samples_std)</span><br><span class="line"></span><br><span class="line">print samples_mean_np</span><br></pre></td></tr></table></figure>
+<p>这一共1000个平均值大概是这样的：[3.44, 3.42, 3.22, 3.2, 2.94 … 4.08, 3.74] （我肯定不会把1000个数字都写完，又没有稿费可以骗）</p>
+<p>然后，我们把这1000个数字用直方图画出来：</p>
+<p><img src="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/02.png" alt></p>
+<p>TADA! 完美地形成了正态分布。</p>
+<p>结果打印如下：</p>
+<p>平均值：3.48494<br>标准差：0.23506</p>
+<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>这两个统计学和概率论中的知识和概念在机器学习中有这重要的应用，但这些概念较为基础，需要牢牢把握。这两个概念我都是转载的博客，比较易于理解。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+<div>
+      
+</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/机器学习/Python机器学习（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2037,199 +2280,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/技术/2019-4-29-Linux解压中文密码的压缩文件/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Cao Yihao">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar_g.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cyh Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/技术/2019-4-29-Linux解压中文密码的压缩文件/" itemprop="url">Linux解压中文密码的压缩文件</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-29T00:00:00+08:00">
-                2019-04-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/技术/2019-4-29-Linux解压中文密码的压缩文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="技术/2019-4-29-Linux解压中文密码的压缩文件/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  242
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Linux解压中文密码的压缩文件"><a href="#Linux解压中文密码的压缩文件" class="headerlink" title="Linux解压中文密码的压缩文件"></a>Linux解压中文密码的压缩文件</h1><p>最近遇到个小问题，我在ubuntu下解压某群友发的福利压缩文件（解压密码为中文）时，发现总是提示密码错误。</p>
-<p>我第一时间想到了可能是linux和windows编码不同的区别。windows是gbk和utf-8，llinux<br>是标准的utf-8。</p>
-<p>导致两个系统的中文不通用。因为我日常使用ubuntu，不会为这点福利就下个windows，所以在网上找来找去，最后在<a href="https://www.jianshu.com/p/feeeecc35f07" target="_blank" rel="noopener">简书</a>上找到了答案。</p>
-<p>下面就以unzip命令演示一哈：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip -P &quot;$(echo -n 琴叶酱|iconv -f utf-8 -t gbk)&quot; 某个憨批的桌面文件？.zip</span><br></pre></td></tr></table></figure>
-<p>转码部分为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo -n 琴叶酱|iconv -f utf-8 -t gbk</span><br></pre></td></tr></table></figure></p>
-<p>密码是琴叶酱，-f是from，-t是to。，语句意思为将echo输出的字符串从utf-8转码为gbk。</p>
-<p>如果是从windows解压linux加密的压缩文件的话，将utf-8和gbk调换位置即可。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-<div>
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2282,7 +2332,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

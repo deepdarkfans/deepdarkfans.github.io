@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python机器学习（三）]]></title>
+    <url>%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%2FPython%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[中心极限定理部分转载自朱曦炽个人博客，假设检测部分转载维基百科等 Hypothesis Testing（假设检测）简介假设检验是推论统计中用于检验统计假设的一种方法。 而“统计假设”是可通过观察一组随机变量的模型进行检验的科学假说。[1]一旦能估计未知参数，就会希望根据结果对未知的真正参数值做出适当的推论。 统计上对参数的假设，就是对一个或多个参数的论述。而其中欲检验其正确性的为零假设（null hypothesis），零假设通常由研究者决定，反映研究者对未知参数的看法。相对于零假设的其他有关参数之论述是备择假设（alternative hypothesis），它通常反应了执行检定的研究者对参数可能数值的另一种（对立的）看法（换句话说，备择假设通常才是研究者最想知道的）。 假设检验的种类包括：t检验，Z检验，卡方检验，F检验等等。 说明假设检验的过程，可以用法庭的审理来说明。先想像现在法庭上有一名被告，假设该被告是清白的，而检察官必须要提出足够的证据去证明被告的确有罪。 在证明被告有罪前，被告是被假设为清白的。 假设被告清白的假设，就相当于零假设（null hypothesis）。 假设被告有罪的假设，则是备择假设（alternative hypothesis）。 而检察官提出的证据，是否足以确定该被告有罪，则要经过检验。 这样子的检验过程就相当于用T检验或Z检验去检视研究者所搜集到的统计资料。 过程在统计学的文献中，假设检验发挥了重要作用。假设检验大致有如下步骤： 最初研究假设为真相不明。 第一步是提出相关的零假设和对立假设。这是很重要的，因为错误陈述假设会导致后面的过程变得混乱。 第二步是考虑检验中对样本做出的统计假设；例如，关于独立性的假设或关于观测数据的分布的形式的假设。这个步骤也同样重要，因为无效的假设将意味着试验的结果是无效的。 决定哪个检测是合适的，并确定相关检验统计量 T。 在零假设下推导检验统计量的分布。在标准情况下应该会得出一个熟知的结果。比如检验统计量可能会符合学生t-分布或正态分布。 选择一个显著性水平 (α)，若低于这个概率阈值，就会拒绝零假设。最常用的是 5% 和 1%。 根据在零假设成立时的检验统计量T分布，找到数值最接近备择假设，且几率为显著性水平 (α)的区域，此区域称为“拒绝域”，意思是在零假设成立的前提下，落在拒绝域的几率只有α。 针对检验统计量T，根据样本计算其估计值tobs。 若估计值tobs未落在“拒绝域”，接受零假设。若估计值tobs落在“拒绝域”，拒绝零假设，接受对立假设。 例子淑女品茶是一个有关假设检验的著名例子[2]，费雪的一个女同事声称可以判断在奶茶中，是先加入茶还是先加入牛奶。费雪提议给她八杯奶茶，四杯先加茶，四杯先加牛奶，但随机排列，而女同事要说出这八杯奶茶中，哪些先加牛奶，哪些先加茶，检验统计量是确认正确的次数。零假设是女同事无法判断奶茶中的茶先加入还是牛奶先加入，对立假设为女同事有此能力。 若单纯以几率考虑（即女同事没有判断的能力）下，八杯都正确的几率为1/70，约1.4%，因此“拒绝域”为八杯的结果都正确。而测试结果为女同事八杯的结果都正确，在统计上是相当显著的的结果。 Central Limit Theorem（中心检测定理）简介 中心极限定理指的是给定一个任意分布的总体。我每次从这些总体中随机抽取 n 个抽样，一共抽 m 次。 然后把这 m 组抽样分别求出平均值。 这些平均值的分布接近正态分布。 举个例子 现在我们要统计全国的人的体重，看看我国平均体重是多少。当然，我们把全国所有人的体重都调查一遍是不现实的。所以我们打算一共调查1000组，每组50个人。 然后，我们求出第一组的体重平均值、第二组的体重平均值，一直到最后一组的体重平均值。中心极限定理说：这些平均值是呈现正态分布的。并且，随着组数的增加，效果会越好。 最后，当我们再把1000组算出来的平均值加起来取个平均值，这个平均值会接近全国平均体重。 其中要注意的几点： 总体本身的分布不要求正态分布上面的例子中，人的体重是正态分布的。但如果我们的例子是掷一个骰子（平均分布），最后每组的平均值也会组成一个正态分布。（神奇！） 样本每组要足够大，但也不需要太大取样本的时候，一般认为，每组大于等于30个，即可让中心极限定理发挥作用。 话不多说，我们现在来一步步看到中心极限定理是如何起作用的。 例子生成数据假设我们现在观测一个人掷骰子。这个骰子是公平的，也就是说掷出1~6的概率都是相同的：1/6。他掷了一万次。我们用python来模拟投掷的结果： 1234import numpy as np random_data = np.random.randint(1, 7, 10000)print random_data.mean() # 打印平均值print random_data.std() # 打印标准差 生成出来的平均值：3.4927 （每次重新生成都会略有不同）生成出来的标准差：1.7079 平均值接近3.5很好理解。 因为每次掷出来的结果是1、2、3、4、5、6。 每个结果的概率是1/6。所以加权平均值就是3.5。 画图我们把生成的数据用直方图画出来直观地感受一下： 抽一组样本我们接下来随便先拿一组抽样，手动算一下。例如我们先从生成的数据中随机抽取10个数字： 12345sample1 = []for i in range(0, 10): sample1.append(random_data[int(np.random.random() * len(random_data))]) print sample1 # 打印出来 这10个数字的结果是： [3, 4, 3, 6, 1, 6, 6, 3, 4, 4]平均值：4.0标准差：1.54 可以看到，我们只抽10个的时候，样本的平均值（4.0）会距离总体的平均值（3.5）有所偏差。有时候我们运气不好，抽出来的数字可能偏差很大，比如抽出来10个数字都是6。那平均值就是6了。 为什么会出现都是6的情况呢？因为我比较6…哦不是，因为这就是随机的魅力呀！ 验证定理我们让中心极限定理发挥作用。现在我们抽取1000组，每组50个。我们把每组的平均值都算出来。 1234567891011121314151617samples = []samples_mean = []samples_std = []for i in range(0, 1000): sample = [] for j in range(0, 50): sample.append(random_data[int(np.random.random() * len(random_data))]) sample_np = np.array(sample) samples_mean.append(sample_np.mean()) samples_std.append(sample_np.std()) samples.append(sample_np) samples_mean_np = np.array(samples_mean)samples_std_np = np.array(samples_std)print samples_mean_np 这一共1000个平均值大概是这样的：[3.44, 3.42, 3.22, 3.2, 2.94 … 4.08, 3.74] （我肯定不会把1000个数字都写完，又没有稿费可以骗） 然后，我们把这1000个数字用直方图画出来： TADA! 完美地形成了正态分布。 结果打印如下： 平均值：3.48494标准差：0.23506 尾声这两个统计学和概率论中的知识和概念在机器学习中有这重要的应用，但这些概念较为基础，需要牢牢把握。这两个概念我都是转载的博客，比较易于理解。]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>machine learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python机器学习（二）]]></title>
     <url>%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%2FPython%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
     <content type="text"><![CDATA[前言因为多变量分析内容太多，而且涉及很多的统计学基础（绝大部分高中都学过），所以这一章算是复习，分两篇来写。 Multivariate Analysis（多变量分析）多变量分析的意义就是研究多种自变量而得到因变量的表现。这看起来比单变量分析更加的真实和可靠，毕竟在现实生活中，各个事物都是互相联系的。 按生日和性别分析南希认为同一时期的男性用户使用频率要远大于女性用户。因为根据之前的表图，男性用户使用总次数要远多于女性。艾瑞克认为研究这个方面的最好的办法就是绘制一个堆叠柱状图（stacked bar graph）（柱状图中每一个柱都有两种以上的颜色，这里颜色代表性别）代码如下： 123groupby_birthyear_gender = data.groupby([&apos;birthyear&apos;, &apos;gender&apos;])[&apos;birthyear&apos;].count().unstack(&apos;gender&apos;).fillna(0)#以出生年月和性别排序，并将性别的索引由列改为行groupby_birthyear_gender[[&apos;Male&apos;,&apos;Female&apos;,&apos;Other&apos;]].plot.bar(title = &apos;Distribution of birth years by Gender&apos;, stacked=True, figsize = (15,4))plt.show() Output： 代码含义：我们先将数据帧的列索引用unstack函数给转换为行索引，之后，将gender这一个列给分为三种：男，女，其他。这样我们就有了三种性别的不同的行程总数。 由图可知男士的确占大多数，但是也有例外。比如1947年出生的人使用单车的全为女性。1964和1994的人也大多是女性。 按生日和用户类型分析在之前对80后用户的分析来看，所有的用户都是会员。南希非常好奇其他的年龄段的会员占比是多少？难道大多数都是普通用户？于是艾瑞克开始对生日和用户类型进行分析：123groupby_birthyear_usertype=data.groupby([&apos;birthyear&apos;,&apos;usertype&apos;])[&apos;birthyear&apos;].count().unstack(&apos;usertype&apos;).fillna(0)#以出生年月和用户类型排序，并将用户类型的索引由列改为行groupby_birthyear_usertype[&apos;Member&apos;].plot.bar(title=&apos;Distribution of birth years by Usertype&apos;,stacked=True,figsize=(15,4))plt.show() Output： 南希看了非常惊讶：咋全都是会员？难道只有正式会员才需要填写生日？艾瑞克决定验证一下1print(data[data[&apos;usertype&apos;]==&apos;Short-Term Pass Holder&apos;][&apos;birthyear&apos;].isnull().values.all())#验证普通会员是否有出生年月 Output：1True 果然，普通用户并没有填写生日。同样的，艾瑞克又验证了一下普通用户是否填写了性别，结果也是没有填写。说明我们没有任何关于普通用户的身份数据。南希不得不重新考虑之前的推断：关于80后的品牌忠诚度。因为根本不知道80后的会员在80后总人数占多少。这个数据废弃了南希之前的推断。 时间序列分析南希想知道基于开始日期的行程的频数。于是艾瑞克不得不把起始日期给转换为日期字符格式，他还做了更多，将日期拆分为多个小段（年，月，日，小时等）。 代码如下：12345678910List_=list(data[&apos;starttime&apos;])#把开始时间转换时间字符串List_=[datetime.datetime.strptime(x, &quot;%m/%d/%Y %H:%M&quot;) for x in List_]#将时间字符串转换为时间元组data[&apos;starttime_mod&apos;]=pd.Series(List_,index=data.index)#Series函数创建索引data[&apos;starttime_date&apos;] = pd.Series([x.date() for x in List_],index=data.index)data[&apos;starttime_year&apos;] = pd.Series([x.year for x in List_],index=data.index)data[&apos;starttime_month&apos;] = pd.Series([x.month for x in List_],index=data.index)data[&apos;starttime_day&apos;] = pd.Series([x.day for x in List_],index=data.index)data[&apos;starttime_hour&apos;] = pd.Series([x.hour for x in List_],index=data.index)data.groupby(&apos;starttime_date&apos;)[&apos;tripduration&apos;].mean().plot.bar(title = &apos;Distribution of Trip duration by date&apos;, figsize = (15,4))plt.show() Output： 这个表格看起来有一种显而易见的走势。这就引出了时间序列的一些定义。 Time Series Components下面是时间序列中最常见的三种走势图。 Seasonal Pattern（季节性走势）如图所示，季节性走势总是有着时间规律，这些时期可以是一月中的周数，一年中的周数，也可以是一年中的月数。 Cyclic Pattern（循环走势）循环走势唯一与季节性走势不同之处在于循环走势没有时间上的规律。 Trend（趋势）趋势就是一段宏观上来看上升或降低的连续变量。这种走势可能不是很精准的线性走势，but when smoothing is applied it can generalize into either of the direction.（这句话不会翻译，大概意思知道） 由这几个走势；来看，南希认为这个时间行程的走势明显是季节性走势。因为这个图的趋势总是有一段精确的时间间隔，这就是季节性。事实上，我们可以把分布给分为三种类型。一种是季节性，就是每隔一段时间就会重复。一种是水平密度分布（flat density distribution），第三种就是线性分布。 到这第二部分完毕]]></content>
@@ -122,17 +133,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[自己的第一篇博客]]></title>
-    <url>%2F%E6%97%A5%E5%B8%B8%2F2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[先test一哈马上毕业，先搞个代码块1print(&quot;hello world&quot;) 再搞个代码行完事了，剩下等有时间再写主要搞机器学习和网络安全]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[试一下插入图片]]></title>
     <url>%2F%E6%97%A5%E5%B8%B8%2F2019-04-16-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%2F</url>
     <content type="text"><![CDATA[试一下Markdown的图片插入，用阿里云插入的，picgo用不了，有点麻烦，要是可以直接复制url就好2]]></content>
@@ -141,6 +141,17 @@
       </categories>
       <tags>
         <tag>Daily</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[自己的第一篇博客]]></title>
+    <url>%2F%E6%97%A5%E5%B8%B8%2F2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[先test一哈马上毕业，先搞个代码块1print(&quot;hello world&quot;) 再搞个代码行完事了，剩下等有时间再写主要搞机器学习和网络安全]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>

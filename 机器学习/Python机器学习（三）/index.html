@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="iOS,Swift,IBInspectable,">
+  <meta name="keywords" content="machine learning,">
 
 
 
@@ -81,24 +81,21 @@
 
 
 
-<meta name="description" content="本文首次发布于 BY Blog, 作者 @柏荧(BY) ,转载请保留原文链接.  前言通过 IB 设置 控件 的属性非常的方便。  但是缺点也很明显，那就是有一些属性没有暴露在 IB 的设置面板中。这时候就要使用 @IBInspectable 在 IB 面板中添加这些没有的属性。 关于在 OC 中使用 IBInspectable 可以看一下我的 这篇文章 正文在项目中最常遇到的情况是为 view">
-<meta name="keywords" content="iOS,Swift,IBInspectable">
+<meta name="description" content="中心极限定理部分转载自朱曦炽个人博客，假设检测部分转载维基百科等  Hypothesis Testing（假设检测）简介假设检验是推论统计中用于检验统计假设的一种方法。﻿而“统计假设”是可通过观察一组随机变量的模型进行检验的科学假说。[1]一旦能估计未知参数，就会希望根据结果对未知的真正参数值做出适当的推论。 统计上对参数的假设，就是对一个或多个参数的论述。而其中欲检验其正确性的为零假设（nul">
+<meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在 Swift 中使用 IBInspectable">
-<meta property="og:url" content="https://www.deepdark.com/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/index.html">
+<meta property="og:title" content="Python机器学习（三）">
+<meta property="og:url" content="https://www.deepdark.com/机器学习/Python机器学习（三）/index.html">
 <meta property="og:site_name" content="Cyh Blog">
-<meta property="og:description" content="本文首次发布于 BY Blog, 作者 @柏荧(BY) ,转载请保留原文链接.  前言通过 IB 设置 控件 的属性非常的方便。  但是缺点也很明显，那就是有一些属性没有暴露在 IB 的设置面板中。这时候就要使用 @IBInspectable 在 IB 面板中添加这些没有的属性。 关于在 OC 中使用 IBInspectable 可以看一下我的 这篇文章 正文在项目中最常遇到的情况是为 view">
+<meta property="og:description" content="中心极限定理部分转载自朱曦炽个人博客，假设检测部分转载维基百科等  Hypothesis Testing（假设检测）简介假设检验是推论统计中用于检验统计假设的一种方法。﻿而“统计假设”是可通过观察一组随机变量的模型进行检验的科学假说。[1]一旦能估计未知参数，就会希望根据结果对未知的真正参数值做出适当的推论。 统计上对参数的假设，就是对一个或多个参数的论述。而其中欲检验其正确性的为零假设（nul">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1ff9fpog0vrj30ho084t9m.jpg">
-<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tNc79gy1ff9h5afhv2j30f803ajri.jpg">
-<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1ff9h70z922j30ag061wf7.jpg">
-<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tNc79gy1ff9hs6z5q1j30fr03vweu.jpg">
-<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tNc79gy1ff9h94um01j30aj01vjre.jpg">
-<meta property="og:updated_time" content="2019-04-16T09:59:25.257Z">
+<meta property="og:image" content="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/01.png">
+<meta property="og:image" content="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/02.png">
+<meta property="og:updated_time" content="2019-06-09T06:44:35.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 Swift 中使用 IBInspectable">
-<meta name="twitter:description" content="本文首次发布于 BY Blog, 作者 @柏荧(BY) ,转载请保留原文链接.  前言通过 IB 设置 控件 的属性非常的方便。  但是缺点也很明显，那就是有一些属性没有暴露在 IB 的设置面板中。这时候就要使用 @IBInspectable 在 IB 面板中添加这些没有的属性。 关于在 OC 中使用 IBInspectable 可以看一下我的 这篇文章 正文在项目中最常遇到的情况是为 view">
-<meta name="twitter:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1ff9fpog0vrj30ho084t9m.jpg">
+<meta name="twitter:title" content="Python机器学习（三）">
+<meta name="twitter:description" content="中心极限定理部分转载自朱曦炽个人博客，假设检测部分转载维基百科等  Hypothesis Testing（假设检测）简介假设检验是推论统计中用于检验统计假设的一种方法。﻿而“统计假设”是可通过观察一组随机变量的模型进行检验的科学假说。[1]一旦能估计未知参数，就会希望根据结果对未知的真正参数值做出适当的推论。 统计上对参数的假设，就是对一个或多个参数的论述。而其中欲检验其正确性的为零假设（nul">
+<meta name="twitter:image" content="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/01.png">
 
 
 
@@ -128,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://www.deepdark.com/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/">
+  <link rel="canonical" href="https://www.deepdark.com/机器学习/Python机器学习（三）/">
 
 
 
 
 
-  <title>在 Swift 中使用 IBInspectable | Cyh Blog</title>
+  <title>Python机器学习（三） | Cyh Blog</title>
   
 
 
@@ -292,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/">
+    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/机器学习/Python机器学习（三）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cao Yihao">
@@ -309,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在 Swift 中使用 IBInspectable</h1>
+          <h1 class="post-title" itemprop="name headline">Python机器学习（三）</h1>
         
 
         <div class="post-meta">
@@ -321,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T00:00:00+08:00">
-                2017-05-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-09T14:44:35+08:00">
+                2019-06-09
               </time>
             
 
@@ -332,6 +329,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -340,8 +359,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/" itemprop="commentCount"></span>
+                <a href="/机器学习/Python机器学习（三）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="机器学习/Python机器学习（三）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -363,7 +382,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  548
+                  2.2k
                 </span>
               
 
@@ -379,7 +398,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  7
                 </span>
               
             </div>
@@ -401,49 +420,63 @@
 
       
         <blockquote>
-<p>本文首次发布于 <a href="http://qiubaiying.github.io" target="_blank" rel="noopener">BY Blog</a>, 作者 <a href="http://github.com/qiubaiying" target="_blank" rel="noopener">@柏荧(BY)</a> ,转载请保留原文链接.</p>
+<p>中心极限定理部分转载自<a href="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/" target="_blank" rel="noopener">朱曦炽个人博客</a>，假设检测部分转载维基百科等</p>
 </blockquote>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>通过 IB 设置 控件 的属性非常的方便。</p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNc79gy1ff9fpog0vrj30ho084t9m.jpg" alt></p>
-<p>但是缺点也很明显，那就是有一些属性没有暴露在 IB 的设置面板中。这时候就要使用 <code>@IBInspectable</code> 在 IB 面板中添加这些没有的属性。</p>
-<p>关于在 OC 中使用 <code>IBInspectable</code> 可以看一下我的 <a href="http://qiubaiying.top/2016/12/01/%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0%E5%9C%86%E8%A7%92%E5%92%8C%E6%8F%8F%E8%BE%B9/#高级" target="_blank" rel="noopener">这篇文章</a></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>在项目中最常遇到的情况是为 view 设置圆角、描边，以及为 文本控件 添加本地化字符串。</p>
-<h2 id="圆角、描边"><a href="#圆角、描边" class="headerlink" title="圆角、描边"></a>圆角、描边</h2><p>先来看看设置圆角、描边</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIView</span> </span>&#123;</span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> cornerRadius: <span class="type">CGFloat</span> &#123;</span><br><span class="line">        <span class="keyword">get</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> layer.cornerRadius</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            layer.cornerRadius = newValue</span><br><span class="line">            layer.masksToBounds = newValue &gt; <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> borderWidth: <span class="type">CGFloat</span> &#123;</span><br><span class="line">        <span class="keyword">get</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> layer.borderWidth</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            layer.borderWidth = newValue &gt; <span class="number">0</span> ? newValue : <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> borderColor: <span class="type">UIColor</span> &#123;</span><br><span class="line">        <span class="keyword">get</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="type">UIColor</span>(cgColor: layer.borderColor!)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            layer.borderColor = newValue.cgColor</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>添加完成就可以在 IB 中设置 view 的这些属性了</p>
-<p><img src="https://ww4.sinaimg.cn/large/006tNc79gy1ff9h5afhv2j30f803ajri.jpg" alt></p>
-<p>运行效果</p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNc79gy1ff9h70z922j30ag061wf7.jpg" alt></p>
-<h2 id="利用-IBDesignable-在-IB-中实时显示-IBInspectable-的样式"><a href="#利用-IBDesignable-在-IB-中实时显示-IBInspectable-的样式" class="headerlink" title="利用 @IBDesignable 在 IB 中实时显示 @IBInspectable 的样式"></a>利用 @IBDesignable 在 IB 中实时显示 @IBInspectable 的样式</h2><p>创建一个新的 class 继承 <code>UIView</code> ，并且使用 <code>@IBDesignable</code> 声明</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="meta">@IBDesignable</span> <span class="class"><span class="keyword">class</span> <span class="title">IBDesignableView</span>: <span class="title">UIView</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在 IB 中，选择 view 的 class 为 我们新建的 <code>IBDesignableView</code></p>
-<p><img src="https://ww1.sinaimg.cn/large/006tNc79gy1ff9hs6z5q1j30fr03vweu.jpg" alt></p>
-<p>这样在 IB 调整属性时，这些属性的变化就会实时显示在 IB 中。</p>
-<h2 id="本地化字符串"><a href="#本地化字符串" class="headerlink" title="本地化字符串"></a>本地化字符串</h2><p>本地化字符串的解决方法和上面的添加圆角一样</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UILabel</span> </span>&#123;</span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> localizedKey: <span class="type">String?</span> &#123;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> newValue = newValue <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">            text = <span class="type">NSLocalizedString</span>(newValue, comment: <span class="string">""</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">get</span> &#123; <span class="keyword">return</span> text &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIButton</span> </span>&#123;</span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> localizedKey: <span class="type">String?</span> &#123;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> newValue = newValue <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">            setTitle(<span class="type">NSLocalizedString</span>(newValue, comment: <span class="string">""</span>), <span class="keyword">for</span>: .normal)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">get</span> &#123; <span class="keyword">return</span> titleLabel?.text &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UITextField</span> </span>&#123;</span><br><span class="line">    <span class="meta">@IBInspectable</span> <span class="keyword">var</span> localizedKey: <span class="type">String?</span> &#123;</span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> newValue = newValue <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">            placeholder = <span class="type">NSLocalizedString</span>(newValue, comment: <span class="string">""</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">get</span> &#123; <span class="keyword">return</span> placeholder &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样，在 IB 中我们就可以利用对应类型的 Localized Key 来直接设置本地化字符串了：</p>
-<p><img src="https://ww1.sinaimg.cn/large/006tNc79gy1ff9h94um01j30aj01vjre.jpg" alt></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p><code>IBInspectable</code> 可以使用这些的类型</p>
+<h2 id="Hypothesis-Testing（假设检测）"><a href="#Hypothesis-Testing（假设检测）" class="headerlink" title="Hypothesis Testing（假设检测）"></a>Hypothesis Testing（假设检测）</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><strong>假设检验</strong>是推论统计中用于检验统计假设的一种方法。﻿而“统计假设”是可通过观察一组随机变量的模型进行检验的科学假说。[1]一旦能估计未知参数，就会希望根据结果对未知的真正参数值做出适当的推论。</p>
+<p>统计上对参数的假设，就是对一个或多个参数的论述。而其中欲检验其正确性的为零假设（null hypothesis），零假设通常由研究者决定，反映研究者对未知参数的看法。相对于零假设的其他有关参数之论述是备择假设（alternative hypothesis），它通常反应了执行检定的研究者对参数可能数值的另一种（对立的）看法（换句话说，备择假设通常才是研究者最想知道的）。</p>
+<p>假设检验的种类包括：t检验，Z检验，卡方检验，F检验等等。</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>假设检验的过程，可以用法庭的审理来说明。先想像现在法庭上有一名被告，假设该被告是清白的，而检察官必须要提出足够的证据去证明被告的确有罪。 在证明被告有罪前，被告是被假设为清白的。</p>
 <ul>
-<li><code>Int</code></li>
-<li><code>CGFloat</code></li>
-<li><code>Double</code></li>
-<li><code>String</code></li>
-<li><code>Bool</code></li>
-<li><code>CGPoint</code></li>
-<li><code>CGSize</code></li>
-<li><code>CGRect</code></li>
-<li><code>UIColor</code></li>
-<li><code>UIImage</code></li>
+<li>假设被告清白的假设，就相当于零假设（null hypothesis）。</li>
+<li>假设被告有罪的假设，则是备择假设（alternative hypothesis）。</li>
 </ul>
-<p>合理的使用<code>@IBInspectable</code> 能减少很多的模板代码，提高我们的开发效率。</p>
-<blockquote>
-<p>参考</p>
-<ul>
-<li><a href="https://onevcat.com/2017/04/storyboard-argue/" target="_blank" rel="noopener">《再看关于 Storyboard 的一些争论》</a></li>
-<li><a href="https://medium.com/@Anantha1992/ibdesignable-and-ibinspectable-in-swift-3-702d7dd00ca" target="_blank" rel="noopener">《@IBDesignable and @IBInspectable in Swift 3》</a></li>
-</ul>
+<p>而检察官提出的证据，是否足以确定该被告有罪，则要经过检验。 这样子的检验过程就相当于用T检验或Z检验去检视研究者所搜集到的统计资料。</p>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>在统计学的文献中，假设检验发挥了重要作用。假设检验大致有如下步骤：</p>
+<ol>
+<li>最初研究假设为真相不明。</li>
+<li>第一步是提出相关的零假设和对立假设。这是很重要的，因为错误陈述假设会导致后面的过程变得混乱。</li>
+<li>第二步是考虑检验中对样本做出的统计假设；例如，关于独立性的假设或关于观测数据的分布的形式的假设。这个步骤也同样重要，因为无效的假设将意味着试验的结果是无效的。</li>
+<li>决定哪个检测是合适的，并确定相关检验统计量 T。</li>
+<li>在零假设下推导检验统计量的分布。在标准情况下应该会得出一个熟知的结果。比如检验统计量可能会符合学生t-分布或正态分布。</li>
+<li>选择一个显著性水平 (α)，若低于这个概率阈值，就会拒绝零假设。最常用的是 5% 和 1%。</li>
+<li>根据在零假设成立时的检验统计量T分布，找到数值最接近备择假设，且几率为显著性水平 (α)的区域，此区域称为“拒绝域”，意思是在零假设成立的前提下，落在拒绝域的几率只有α。</li>
+<li>针对检验统计量T，根据样本计算其估计值tobs。</li>
+<li>若估计值tobs未落在“拒绝域”，接受零假设。若估计值tobs落在“拒绝域”，拒绝零假设，接受对立假设。</li>
+</ol>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>淑女品茶是一个有关假设检验的著名例子[2]，费雪的一个女同事声称可以判断在奶茶中，是先加入茶还是先加入牛奶。费雪提议给她八杯奶茶，四杯先加茶，四杯先加牛奶，但随机排列，而女同事要说出这八杯奶茶中，哪些先加牛奶，哪些先加茶，检验统计量是确认正确的次数。零假设是女同事无法判断奶茶中的茶先加入还是牛奶先加入，对立假设为女同事有此能力。</p>
+<p>若单纯以几率考虑（即女同事没有判断的能力）下，八杯都正确的几率为1/70，约1.4%，因此“拒绝域”为八杯的结果都正确。而测试结果为女同事八杯的结果都正确，在统计上是相当显著的的结果。</p>
+<h2 id="Central-Limit-Theorem（中心检测定理）"><a href="#Central-Limit-Theorem（中心检测定理）" class="headerlink" title="Central Limit Theorem（中心检测定理）"></a>Central Limit Theorem（中心检测定理）</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><blockquote>
+<p>中心极限定理指的是给定一个任意分布的总体。我每次从这些总体中随机抽取 n 个抽样，一共抽 m 次。 然后把这 m 组抽样分别求出平均值。 这些平均值的分布接近正态分布。</p>
 </blockquote>
+<p>举个例子</p>
+<p>现在我们要统计全国的人的体重，看看我国平均体重是多少。当然，我们把全国所有人的体重都调查一遍是不现实的。所以我们打算一共调查1000组，每组50个人。 然后，我们求出第一组的体重平均值、第二组的体重平均值，一直到最后一组的体重平均值。中心极限定理说：这些平均值是呈现正态分布的。并且，随着组数的增加，效果会越好。 最后，当我们再把1000组算出来的平均值加起来取个平均值，这个平均值会接近全国平均体重。</p>
+<p>其中要注意的几点：</p>
+<ol>
+<li><p>总体本身的分布不要求正态分布<br>上面的例子中，人的体重是正态分布的。但如果我们的例子是掷一个骰子（平均分布），最后每组的平均值也会组成一个正态分布。（神奇！）</p>
+</li>
+<li><p>样本每组要足够大，但也不需要太大<br>取样本的时候，一般认为，每组大于等于30个，即可让中心极限定理发挥作用。</p>
+</li>
+</ol>
+<p>话不多说，我们现在来一步步看到中心极限定理是如何起作用的。</p>
+<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><h4 id="生成数据"><a href="#生成数据" class="headerlink" title="生成数据"></a>生成数据</h4><p>假设我们现在观测一个人掷骰子。这个骰子是公平的，也就是说掷出1~6的概率都是相同的：1/6。他掷了一万次。我们用python来模拟投掷的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np </span><br><span class="line">random_data = np.random.randint(1, 7, 10000)</span><br><span class="line">print random_data.mean() # 打印平均值</span><br><span class="line">print random_data.std()  # 打印标准差</span><br></pre></td></tr></table></figure>
+<p>生成出来的平均值：3.4927 （每次重新生成都会略有不同）<br>生成出来的标准差：1.7079</p>
+<p>平均值接近3.5很好理解。 因为每次掷出来的结果是1、2、3、4、5、6。 每个结果的概率是1/6。所以加权平均值就是3.5。</p>
+<h4 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h4><p>我们把生成的数据用直方图画出来直观地感受一下：</p>
+<p><img src="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/01.png" alt></p>
+<h4 id="抽一组样本"><a href="#抽一组样本" class="headerlink" title="抽一组样本"></a>抽一组样本</h4><p>我们接下来随便先拿一组抽样，手动算一下。例如我们先从生成的数据中随机抽取10个数字：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sample1 = []</span><br><span class="line">for i in range(0, 10):</span><br><span class="line">    sample1.append(random_data[int(np.random.random() * len(random_data))])</span><br><span class="line">    </span><br><span class="line">print sample1 # 打印出来</span><br></pre></td></tr></table></figure>
+<p>这10个数字的结果是： [3, 4, 3, 6, 1, 6, 6, 3, 4, 4]<br>平均值：4.0<br>标准差：1.54</p>
+<p>可以看到，我们只抽10个的时候，样本的平均值（4.0）会距离总体的平均值（3.5）有所偏差。<br>有时候我们运气不好，抽出来的数字可能偏差很大，比如抽出来10个数字都是6。那平均值就是6了。 为什么会出现都是6的情况呢？因为我比较6…哦不是，因为这就是随机的魅力呀！</p>
+<h4 id="验证定理"><a href="#验证定理" class="headerlink" title="验证定理"></a>验证定理</h4><p>我们让中心极限定理发挥作用。现在我们抽取1000组，每组50个。<br>我们把每组的平均值都算出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">samples = []</span><br><span class="line">samples_mean = []</span><br><span class="line">samples_std = []</span><br><span class="line"></span><br><span class="line">for i in range(0, 1000):</span><br><span class="line">    sample = []</span><br><span class="line">    for j in range(0, 50):</span><br><span class="line">        sample.append(random_data[int(np.random.random() * len(random_data))])</span><br><span class="line">    sample_np = np.array(sample)</span><br><span class="line">    samples_mean.append(sample_np.mean())</span><br><span class="line">    samples_std.append(sample_np.std())</span><br><span class="line">    samples.append(sample_np)</span><br><span class="line">    </span><br><span class="line">samples_mean_np = np.array(samples_mean)</span><br><span class="line">samples_std_np = np.array(samples_std)</span><br><span class="line"></span><br><span class="line">print samples_mean_np</span><br></pre></td></tr></table></figure>
+<p>这一共1000个平均值大概是这样的：[3.44, 3.42, 3.22, 3.2, 2.94 … 4.08, 3.74] （我肯定不会把1000个数字都写完，又没有稿费可以骗）</p>
+<p>然后，我们把这1000个数字用直方图画出来：</p>
+<p><img src="https://www.zhuxichi.com/2017/02/14/CentralLimitTheorem/02.png" alt></p>
+<p>TADA! 完美地形成了正态分布。</p>
+<p>结果打印如下：</p>
+<p>平均值：3.48494<br>标准差：0.23506</p>
+<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>这两个统计学和概率论中的知识和概念在机器学习中有这重要的应用，但这些概念较为基础，需要牢牢把握。这两个概念我都是转载的博客，比较易于理解。</p>
 
       
     </div>
@@ -467,11 +500,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/iOS/" rel="tag"># iOS</a>
-          
-            <a href="/tags/Swift/" rel="tag"># Swift</a>
-          
-            <a href="/tags/IBInspectable/" rel="tag"># IBInspectable</a>
+            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
           
         </div>
       
@@ -484,8 +513,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uncategorized/2017-05-04-R.swift-的使用/" rel="next" title="R.swift 的使用">
-                <i class="fa fa-chevron-left"></i> R.swift 的使用
+              <a href="/机器学习/Python机器学习（二）/" rel="next" title="Python机器学习（二）">
+                <i class="fa fa-chevron-left"></i> Python机器学习（二）
               </a>
             
           </div>
@@ -493,10 +522,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/uncategorized/2017-06-19-快速配置zsh/" rel="prev" title="快速配置zsh">
-                快速配置zsh <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -687,7 +712,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#圆角、描边"><span class="nav-number">2.1.</span> <span class="nav-text">圆角、描边</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-IBDesignable-在-IB-中实时显示-IBInspectable-的样式"><span class="nav-number">2.2.</span> <span class="nav-text">利用 @IBDesignable 在 IB 中实时显示 @IBInspectable 的样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化字符串"><span class="nav-number">2.3.</span> <span class="nav-text">本地化字符串</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hypothesis-Testing（假设检测）"><span class="nav-number">1.</span> <span class="nav-text">Hypothesis Testing（假设检测）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说明"><span class="nav-number">1.2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过程"><span class="nav-number">1.3.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">1.4.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Central-Limit-Theorem（中心检测定理）"><span class="nav-number">2.</span> <span class="nav-text">Central Limit Theorem（中心检测定理）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介-1"><span class="nav-number">2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子-1"><span class="nav-number">2.2.</span> <span class="nav-text">例子</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成数据"><span class="nav-number">2.2.1.</span> <span class="nav-text">生成数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#画图"><span class="nav-number">2.2.2.</span> <span class="nav-text">画图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽一组样本"><span class="nav-number">2.2.3.</span> <span class="nav-text">抽一组样本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证定理"><span class="nav-number">2.2.4.</span> <span class="nav-text">验证定理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尾声"><span class="nav-number">3.</span> <span class="nav-text">尾声</span></a></li></ol></div>
             
 
           </div>
@@ -860,9 +885,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://www.deepdark.com/uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/';
-          this.page.identifier = 'uncategorized/2017-05-05-在-Swift-中使用-IBInspectable/';
-          this.page.title = '在 Swift 中使用 IBInspectable';
+          this.page.url = 'https://www.deepdark.com/机器学习/Python机器学习（三）/';
+          this.page.identifier = '机器学习/Python机器学习（三）/';
+          this.page.title = 'Python机器学习（三）';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://blog-etellfvhpu.disqus.com/embed.js';
@@ -1214,7 +1239,7 @@
         onPopupClose();
       }
     });
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
 
 
 
@@ -1230,6 +1255,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
