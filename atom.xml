@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.deepdark.com/"/>
-  <updated>2019-06-11T05:09:14.812Z</updated>
+  <updated>2019-06-13T13:12:07.084Z</updated>
   <id>https://www.deepdark.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python机器学习（四）</title>
+    <link href="https://www.deepdark.com/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%94%EF%BC%89/"/>
+    <id>https://www.deepdark.com/机器学习/Python机器学习（五）/</id>
+    <published>2019-06-13T13:12:07.084Z</published>
+    <updated>2019-06-13T13:12:07.084Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;kNN算法实例&quot;&gt;&lt;a href=&quot;#kNN算法实例&quot; class=&quot;headerlink&quot; title=&quot;kNN算法实例&quot;&gt;&lt;/a&gt;kNN算法实例&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本篇主要学到了kNN算法在实际生活中的运用，这里是实例之一：海伦约会&lt;/p
+      
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://www.deepdark.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="machine learning" scheme="https://www.deepdark.com/tags/machine-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>Python机器学习（四）</title>
@@ -324,29 +348,6 @@
   </entry>
   
   <entry>
-    <title>自己的第一篇博客</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://www.deepdark.com/日常/2019-04-16-第一篇博客/</id>
-    <published>2019-04-15T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.158Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;先test一哈&quot;&gt;&lt;a href=&quot;#先test一哈&quot; class=&quot;headerlink&quot; title=&quot;先test一哈&quot;&gt;&lt;/a&gt;&lt;strong&gt;先test一哈&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;马上毕业，先搞个代码块&lt;br&gt;&lt;figure class=&quot;hig
-      
-    
-    </summary>
-    
-      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="日常" scheme="https://www.deepdark.com/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>试一下插入图片</title>
     <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     <id>https://www.deepdark.com/日常/2019-04-16-插入图片/</id>
@@ -366,6 +367,29 @@
     
     
       <category term="Daily" scheme="https://www.deepdark.com/tags/Daily/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己的第一篇博客</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://www.deepdark.com/日常/2019-04-16-第一篇博客/</id>
+    <published>2019-04-15T16:00:00.000Z</published>
+    <updated>2019-05-07T09:14:47.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;先test一哈&quot;&gt;&lt;a href=&quot;#先test一哈&quot; class=&quot;headerlink&quot; title=&quot;先test一哈&quot;&gt;&lt;/a&gt;&lt;strong&gt;先test一哈&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;马上毕业，先搞个代码块&lt;br&gt;&lt;figure class=&quot;hig
+      
+    
+    </summary>
+    
+      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="日常" scheme="https://www.deepdark.com/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
@@ -465,31 +489,6 @@
       <category term="iOS" scheme="https://www.deepdark.com/tags/iOS/"/>
     
       <category term="Swift" scheme="https://www.deepdark.com/tags/Swift/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用 Debug Memory Graph 检测内测泄漏</title>
-    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2017-07-26-%E5%88%A9%E7%94%A8-Debug-Memory-Graph-%E6%A3%80%E6%B5%8B%E5%86%85%E6%B5%8B%E6%B3%84%E6%BC%8F/"/>
-    <id>https://www.deepdark.com/技术/2017-07-26-利用-Debug-Memory-Graph-检测内测泄漏/</id>
-    <published>2017-07-25T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.159Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;平常我们都会用 Instrument 的 Leaks / Allocations 或其他一些开源库进行内存泄露的排查，但它们都存在各种问题和
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Xcode" scheme="https://www.deepdark.com/tags/Xcode/"/>
-    
-      <category term="开发技巧" scheme="https://www.deepdark.com/tags/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
