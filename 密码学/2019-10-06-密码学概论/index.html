@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Cryptography,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Cyh Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="前言最近要讲密码学，只能从操旧业，把几年前已经扔掉的密码学在捡起来。买了本密码学原理与实践，在csdn上看了几篇博客，开始。老长时间没更新了，毕竟没人看，百度也不收录，没动力。  密码学（Cryptography）简介密码学已经有了几千年的历史，一般来说，特指1949年以后的为现代密码学，之前的有近代密码学和古典密码学之分，这两种基本上很好理解，都是字符的移位或者整一个替换表，一个一个加密和解密">
+<meta name="keywords" content="Cryptography">
+<meta property="og:type" content="article">
+<meta property="og:title" content="密码学概论">
+<meta property="og:url" content="https://www.deepdark.com/密码学/2019-10-06-密码学概论/index.html">
+<meta property="og:site_name" content="Cyh Blog">
+<meta property="og:description" content="前言最近要讲密码学，只能从操旧业，把几年前已经扔掉的密码学在捡起来。买了本密码学原理与实践，在csdn上看了几篇博客，开始。老长时间没更新了，毕竟没人看，百度也不收录，没动力。  密码学（Cryptography）简介密码学已经有了几千年的历史，一般来说，特指1949年以后的为现代密码学，之前的有近代密码学和古典密码学之分，这两种基本上很好理解，都是字符的移位或者整一个替换表，一个一个加密和解密">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/192829498.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/193235825.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/193754248.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/193836760.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194517084.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194603201.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194624515.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194803614.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194936467.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195447365.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195504133.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195554288.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195601887.png">
+<meta property="og:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195658327.png">
+<meta property="og:updated_time" content="2019-10-06T12:10:54.903Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="密码学概论">
+<meta name="twitter:description" content="前言最近要讲密码学，只能从操旧业，把几年前已经扔掉的密码学在捡起来。买了本密码学原理与实践，在csdn上看了几篇博客，开始。老长时间没更新了，毕竟没人看，百度也不收录，没动力。  密码学（Cryptography）简介密码学已经有了几千年的历史，一般来说，特指1949年以后的为现代密码学，之前的有近代密码学和古典密码学之分，这两种基本上很好理解，都是字符的移位或者整一个替换表，一个一个加密和解密">
+<meta name="twitter:image" content="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/192829498.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.deepdark.com/密码学/2019-10-06-密码学概论/">
+
+
+
+
+
+  <title>密码学概论 | Cyh Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-138612004-1', 'auto');
+  ga('send', 'pageview');
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/deepdarkfans" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Cyh Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">My Blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/密码学/2019-10-06-密码学概论/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cao Yihao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar_g.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyh Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">密码学概论</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-06T20:08:29+08:00">
+                2019-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/密码学/" itemprop="url" rel="index">
+                    <span itemprop="name">密码学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/密码学/2019-10-06-密码学概论/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="密码学/2019-10-06-密码学概论/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  25
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p><strong>前言</strong><br>最近要讲密码学，只能从操旧业，把几年前已经扔掉的密码学在捡起来。买了本密码学原理与实践，在csdn上看了几篇博客，开始。老长时间没更新了，毕竟没人看，百度也不收录，没动力。</p>
+</blockquote>
+<h1 id="密码学（Cryptography）"><a href="#密码学（Cryptography）" class="headerlink" title="密码学（Cryptography）"></a>密码学（Cryptography）</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>密码学已经有了几千年的历史，一般来说，特指1949年以后的为现代密码学，之前的有近代密码学和古典密码学之分，这两种基本上很好理解，都是字符的移位或者整一个替换表，一个一个加密和解密，密码学的真正发展实在与数学以及计算机结合起来之后而建立的一个有着数学基础作为支撑的一门学科。其中属对称加密最为经典，而之后发明的公钥加密（也就是非对称加密），也完善了对称加密的不足和弥补了对称加密的空白。这里我们简要概述一下对称和非对称，其他先不作为重点。<br><a id="more"></a></p>
+<h3 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h3><p>对称加密，即加密密钥和解密密钥相同，代表加密方式为<strong>数据加密标准（DES）</strong> 以及<strong>高级加密标准（AES）</strong> ，其中DES已经在AES加密标准生效之后废弃不用，以为安全性（密钥长度太短）得不到保障。而AES到目前为止依然是使用最多的对程加密，本文主要解释AES加密。</p>
+<h3 id="非对称加密（公钥加密）"><a href="#非对称加密（公钥加密）" class="headerlink" title="非对称加密（公钥加密）"></a>非对称加密（公钥加密）</h3><p>非对称加密在近代才被发明，代表有<strong>RSA</strong>加密等，此加密方式主要分为公钥加密和私钥解密（或者两者可互换）。这个加密的好处就是公钥是可以明文传输的，在传输过程中即使被人拦截，他也因为没有私钥而破解不了密文。而私钥是发送方和接收方各持有一个，因此不需要传输，保证了安全性。以下是一个例子</p>
+<blockquote>
+<p>假设A与B要发送信息，A和B都互相持有各自的公钥。A可以用B的公钥加密明文，再将密文传输过去，然后B收到这个密文之后用自己的私钥来解密。</p>
+</blockquote>
+<p>RSA不仅用于在通讯方面，在数字签名或者远程连接方面也很大应用。</p>
+<h2 id="AES加密详解"><a href="#AES加密详解" class="headerlink" title="AES加密详解"></a>AES加密详解</h2><blockquote>
+<p>以下内容选自<a href="https://www.cnblogs.com/luop/p/4334160.html" target="_blank" rel="noopener">cn博客</a></p>
+</blockquote>
+<p>我们知道数据加密标准（Data Encryption Standard: DES）的密钥长度是56比特，因此算法的理论安全强度是256。但二十世纪中后期正是计算机飞速发展的阶段，元器件制造工艺的进步使得计算机的处理能力越来越强，DES将不能提供足够的安全性。1997年1月2号，美国国家标准技术研究所（National Institute of Standards and Technology: NIST）宣布希望征集高级加密标准（Advanced Encryption Standard: AES）[3]，用以取代DES。AES得到了全世界很多密码工作者的响应，先后有很多人提交了自己设计的算法。最终有5个候选算法进入最后一轮：Rijndael，Serpent，Twofish，RC6和MARS，下图分别为其中的5位作者。最终经过安全性分析、软硬件性能评估等严格的步骤，Rijndael算法获胜。<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/192829498.png" alt="mark"><br>Rijndael由比利时两位非常著名的密码学家Joan Daemen和Vincent Rijmen设计。Rijndael是一个分组密码算法族，其分组长度包括128比特、160比特、192比特、224比特、256比特，密钥长度也包括这五种长度，但是最终AES只选取了分组长度为128比特，密钥长度为128比特、192比特和256比特的三个版本。本文主要结合AES-128进行介绍，AES-196和AES-256的思路基本一样，只是密钥扩展算法的过程会稍有不同，加解密的轮数会适当增加，但加解密的操作都是一样的。另外，本文只对AES算法的各个模块、基本原理进行介绍，旨在加深对算法流程、密码算法实现的了解。在正式软件运用中并不推荐自己编写代码，很多开源项目如Linux，OPENSSL，SRTP等都有非常高效的实现。由于数学知识的缺陷，本文不介绍算法安全性分析相关的知识，有兴趣的读者可以自行阅读相关文献。</p>
+<p>　　AES是一个分组密码，属于对称密码范畴，AES算法的模块在对称密码领域特别是分组密码领域常有使用。</p>
+<h4 id="1-算法流程"><a href="#1-算法流程" class="headerlink" title="1. 算法流程"></a>1. 算法流程</h4><p>AES加密算法涉及4种操作：<strong>字节替代（SubBytes）</strong>、<strong>行移位（ShiftRows）</strong>、<strong>列混淆（MixColumns）</strong>和<strong>轮密钥加（AddRoundKey）</strong>。下图给出了AES加解密的流程，从图中可以看出：1）解密算法的每一步分别对应加密算法的逆操作，2）加解密所有操作的顺序正好是相反的。正是由于这几点（再加上加密算法与解密算法每步的操作互逆）保证了算法的正确性。加解密中每轮的密钥分别由种子密钥经过密钥扩展算法得到。算法中16字节的明文、密文和轮子密钥都以一个4x4的矩阵表示。<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/193235825.png" alt="mark"></p>
+<h5 id="字节替代"><a href="#字节替代" class="headerlink" title="字节替代"></a>字节替代</h5><p>字节代替的主要功能是通过S盒完成一个字节到另外一个字节的映射。S盒的详细构造方法可以《密码编码学与网络安全—原理和实践》。<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/193754248.png" alt="mark"><br>一下都按照《密码编码学与网络安全—原理和实践》教材里边的三个步骤进行推导。</p>
+<p>步骤1、3都比较浅显，即使没有数论和有限域概念，一样可以编程写出来。</p>
+<p>步骤一：</p>
+<p>根据行标号和列标号组合成16X16的二维数组，行标号作为高4bit，列标号作为低4bit;<br>本文重点叙述步骤2的推导。</p>
+<p>步骤二：</p>
+<p>这里边有三个概念：有限域、GF(2^8)、逆。</p>
+<p>有限域：我的理解是，有一些元素构成了一个集合，集合中的一个或多个元素，进行某种运算，所得的结果仍然是集合中的元素。 元素，可以是具体的数字，也可以是字母，或是表达式，等等；某种运算，可以是加减乘除，或者逻辑运算，或者求余，或者是这几种运算的组合，等等。  这个定义当然很不严格，但是我觉得对于理解这个S盒推导够用了。</p>
+<p>GF(2^8)：GF()是代表一个有限域，2^8=256，是指这个有限域内的元素的个数，即256个。</p>
+<p>举个是有限域的集合的例子吧。</p>
+<p>GF(7)={0，1，2，3，4，5，6}，它是关于任意两个元素的相加/乘积模7运算的有限域。特点是任意两个元素相加/乘积，对7取余数，这个余数仍然在GF(7)内。</p>
+<p>截取《密码编码学与网络安全—原理和实践》中的例子：<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/193836760.png" alt="mark"><br>此外，这个$GF(7)$的7叫做阶，特点是阶与域内的元素都互素（互质）。</p>
+<p>在计算机中，一个字节是8位，0~255刚好是一个字节所能代表的所有数字，但是呢，$GF(256)$，256对于0~255内的元素并不是每个都互素（互质），当以251为模时，251~255又不能用，造成浪费，所以不能直接使用上边的计算形式。但是我们还得必须用0~255这256个整数作为一个集合，通过某种运算构成有限域，所有只能把研究重点放在“某种运算”上。可能是为了区分$GF(256)$，所以用$GF(2^8)$。</p>
+<p>逆：乘法逆元。定义：$GF(p)$，   $(a)$、$(b)$、$(a-1)$都在$GF(p)$内，其中$(a)$、$(a-1)$互为乘法逆元，则有：$[(a) * (a-1)] mod (p) = 1$；</p>
+<p>第二个步骤，就是 在步骤一得到的数组基础上，对每个元素 在 $GF(2^8)$有限域上求解出乘法逆元，在原位置替换该元素。</p>
+<p>如何求解有限域上的逆元？《密码编码学与网络安全—原理和实践》中从欧几里得算法开始做知识铺垫，到扩展欧几里得算法。<br>d=gcd(a,b)，d是a和b的最大公约数，或者叫最大公因子。求解步骤：</p>
+<p>1、定义变量：$r0, r1, r2$</p>
+<p>2、赋初值$r0=a;r1=b;$</p>
+<p>3、求解$r0、r1$的余数：$(r3)=(r0) Mod (r1)$;</p>
+<p>4、更新变量：$r0=r1;r1=r2;$</p>
+<p>5、从3开始重复，一直到求解的余数$r1$是0结束。</p>
+<p>6、$r0$就是要求解的最大公约数。<br>扩展欧几里得算法在书上的描写如下<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194517084.png" alt="mark"><br>下面就是俩个构造好的S盒和逆S盒</p>
+<p><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194603201.png" alt="mark"><br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194624515.png" alt="mark"></p>
+<h4 id="行移位"><a href="#行移位" class="headerlink" title="行移位"></a>行移位</h4><p>　行移位是一个4x4的矩阵内部字节之间的置换，用于提供算法的扩散性。</p>
+<p>　　1) 正向行移位</p>
+<p>　　正向行移位用于加密，其原理图如下。其中：第一行保持不变，第二行循环左移8比特，第三行循环左移16比特，第四行循环左移24比特。</p>
+<p>　　假设矩阵的名字为state，用公式表示如下：$state’[i][j] = state[i][(j+i)%4];$其中$i、j$属于$[0,3]$。<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194803614.png" alt="mark"></p>
+<p>2) 逆向行移位</p>
+<p>　　逆向行移位即是相反的操作，即：第一行保持不变，第二行循环右移8比特，第三行循环右移16比特，第四行循环右移24比特。</p>
+<p>　　用公式表示如下：$state’[i][j] = state[i][(4+j-i)%4];$其中$i、j$属于$[0,3]$。</p>
+<h4 id="列混淆"><a href="#列混淆" class="headerlink" title="列混淆"></a>列混淆</h4><p>列混淆：利用GF(28)域上算术特性的一个代替，同样用于提供算法的扩散性。</p>
+<p>　　1) 正向列混淆</p>
+<p>　　正向列混淆的原理图如下：<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/194936467.png" alt="mark"></p>
+<p>根据矩阵的乘法可知，在列混淆的过程中，每个字节对应的值只与该列的4个值有关系。此处的乘法和加法都是定义在GF(28)上的，需要注意如下几点：</p>
+<p>　　　　1) 将某个字节所对应的值乘以2，其结果就是将该值的二进制位左移一位，如果原始值的最高位为1，则还需要将移位后的结果异或00011011</p>
+<blockquote>
+<p>英文原文描述如下：In particular, multiplication of a value by x (i.e., by {02}) can be implemented as a 1-bit left shift followed by a conditional bitwise XOR with (0001 1011) if the leftmost bit of the original value (prior to the shift) is 1.</p>
+</blockquote>
+<p>　　　　2) 乘法对加法满足分配率，例如：$07·S_{0,0}=(01⊕02⊕04)·S_{0,0}= S_{0,0}⊕(02·S_{0,0})(04·S_{0,0})$</p>
+<p>　　　　3) 此处的矩阵乘法与一般意义上矩阵的乘法有所不同，各个值在相加时使用的是模28加法（异或运算）。<br>下面举一个例子，假设某一列的值如下图，运算过程如下：<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195447365.png" alt="mark"><br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195504133.png" alt="mark"></p>
+<p>在计算$02与C9$的乘积时，由于$C9$对应最左边的比特为1，因此需要将C9左移一位后的值与$(0001 1011)$求异或。同理可以求出另外几个值。<br>　2) 逆向列混淆</p>
+<p>　　逆向列混淆的原理图如下：<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195554288.png" alt="mark"><br>因为：<br><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195601887.png" alt="mark"><br>说明两个矩阵互逆，经过一次逆向列混淆后即可恢复原文。</p>
+<h4 id="轮密钥加"><a href="#轮密钥加" class="headerlink" title="轮密钥加"></a>轮密钥加</h4><p>这个操作相对简单，其依据的原理是“任何数和自身的异或结果为0”。加密过程中，每轮的输入与轮子密钥异或一次；因此，解密时再异或上该轮的轮子密钥即可恢复。</p>
+<h4 id="密钥拓展算法"><a href="#密钥拓展算法" class="headerlink" title="密钥拓展算法"></a>密钥拓展算法</h4><p><img src="http://cyhblog.oss-cn-beijing.aliyuncs.com/blog/20191006/195658327.png" alt="mark"><br>密钥扩展过程说明：</p>
+<p>　　　　1)  将种子密钥按图(a)的格式排列，其中$k0、k1、……、k15$依次表示种子密钥的一个字节；排列后用4个32比特的字表示，分别记为$w[0]、w[1]、w[2]、w[3]$；</p>
+<p>　　　　2)  按照如下方式，依次求解$w[j]$，其中j是整数并且属于$[4,43]$；</p>
+<p>　　　　3)  若$j%4=0$,则$w[j]=w[j-4]⊕g(w[j-1])$,否则$w[j]=w[j-4]⊕w[j-1]$；</p>
+<p>　　函数$g$的流程说明：</p>
+<p>　　　　a)  将w循环左移8比特；</p>
+<p>　　　　b)  分别对每个字节做S盒置换；</p>
+<p>　　　　c)  与32比特的常量$（RC[j/4],0,0,0）$进行异或，$RC$是一个一维数组，其值如下。（$RC$的值只需要有10个，而此处用了11个，实际上$RC[0]$在运算中没有用到，增加$RC[0]$是为了便于程序中用数组表示。由于$j$的最小取值是4，$j \over 4$的最小取值则是1，因此不会产生错误。）</p>
+<p>　　　　　　$RC$ = {0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1B, 0x36}</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>密码算法要求是可逆的，这样解密算法才能正确的恢复明文。拿AES来说，在密钥固定的情况下，明文和密文在整个输入空间是一一对应的。因此算法的各个部件也都是可逆的，再将各个部件的操作顺序设计成可逆的，密文就能正确的解密了。</p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>自己找了一份C++的源码，准备作为演示,此代码在dev上编译成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;pbt.h&gt;</span><br><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">#include &lt;tchar.h&gt;</span><br><span class="line">#include &lt;windows.h&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">void aes_detail(int[4][4], int[4][4], int);</span><br><span class="line">void subBytes(int [4][4], int);</span><br><span class="line">void shiftRows(int [4][4], int);</span><br><span class="line">void mixColumns(int [4][4], int);</span><br><span class="line">void addRoundKey(int [4][4], int[4][4]);</span><br><span class="line">int aes_multiple(int, int);</span><br><span class="line">void keyExpansion(int key[4][4], int w[11][4][4]);</span><br><span class="line">int c2i(char );</span><br><span class="line">int menu();</span><br><span class="line">int findfirstfile_lock();</span><br><span class="line">int findfirstfile_unlock();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//S盒</span><br><span class="line">static const int S_BOX[16][16] = &#123; 0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,</span><br><span class="line">                               0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,</span><br><span class="line">                               0xb7, 0xfd, 0x93, 0x26, 0x36, 0x3f, 0xf7, 0xcc, 0x34, 0xa5, 0xe5, 0xf1, 0x71, 0xd8, 0x31, 0x15,</span><br><span class="line">                               0x04, 0xc7, 0x23, 0xc3, 0x18, 0x96, 0x05, 0x9a, 0x07, 0x12, 0x80, 0xe2, 0xeb, 0x27, 0xb2, 0x75,</span><br><span class="line">                               0x09, 0x83, 0x2c, 0x1a, 0x1b, 0x6e, 0x5a, 0xa0, 0x52, 0x3b, 0xd6, 0xb3, 0x29, 0xe3, 0x2f, 0x84,</span><br><span class="line">                               0x53, 0xd1, 0x00, 0xed, 0x20, 0xfc, 0xb1, 0x5b, 0x6a, 0xcb, 0xbe, 0x39, 0x4a, 0x4c, 0x58, 0xcf,</span><br><span class="line">                               0xd0, 0xef, 0xaa, 0xfb, 0x43, 0x4d, 0x33, 0x85, 0x45, 0xf9, 0x02, 0x7f, 0x50, 0x3c, 0x9f, 0xa8,</span><br><span class="line">                               0x51, 0xa3, 0x40, 0x8f, 0x92, 0x9d, 0x38, 0xf5, 0xbc, 0xb6, 0xda, 0x21, 0x10, 0xff, 0xf3, 0xd2,</span><br><span class="line">                               0xcd, 0x0c, 0x13, 0xec, 0x5f, 0x97, 0x44, 0x17, 0xc4, 0xa7, 0x7e, 0x3d, 0x64, 0x5d, 0x19, 0x73,</span><br><span class="line">                               0x60, 0x81, 0x4f, 0xdc, 0x22, 0x2a, 0x90, 0x88, 0x46, 0xee, 0xb8, 0x14, 0xde, 0x5e, 0x0b, 0xdb,</span><br><span class="line">                               0xe0, 0x32, 0x3a, 0x0a, 0x49, 0x06, 0x24, 0x5c, 0xc2, 0xd3, 0xac, 0x62, 0x91, 0x95, 0xe4, 0x79,</span><br><span class="line">                               0xe7, 0xc8, 0x37, 0x6d, 0x8d, 0xd5, 0x4e, 0xa9, 0x6c, 0x56, 0xf4, 0xea, 0x65, 0x7a, 0xae, 0x08,</span><br><span class="line">                               0xba, 0x78, 0x25, 0x2e, 0x1c, 0xa6, 0xb4, 0xc6, 0xe8, 0xdd, 0x74, 0x1f, 0x4b, 0xbd, 0x8b, 0x8a,</span><br><span class="line">                               0x70, 0x3e, 0xb5, 0x66, 0x48, 0x03, 0xf6, 0x0e, 0x61, 0x35, 0x57, 0xb9, 0x86, 0xc1, 0x1d, 0x9e,</span><br><span class="line">                               0xe1, 0xf8, 0x98, 0x11, 0x69, 0xd9, 0x8e, 0x94, 0x9b, 0x1e, 0x87, 0xe9, 0xce, 0x55, 0x28, 0xdf,</span><br><span class="line">                               0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16 &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//逆S盒</span><br><span class="line">static const int INVERSE_S_BOX[16][16] = &#123; 0x52, 0x09, 0x6a, 0xd5, 0x30, 0x36, 0xa5, 0x38, 0xbf, 0x40, 0xa3, 0x9e, 0x81, 0xf3, 0xd7, 0xfb,</span><br><span class="line">                                0x7c, 0xe3, 0x39, 0x82, 0x9b, 0x2f, 0xff, 0x87, 0x34, 0x8e, 0x43, 0x44, 0xc4, 0xde, 0xe9, 0xcb,</span><br><span class="line">                                0x54, 0x7b, 0x94, 0x32, 0xa6, 0xc2, 0x23, 0x3d, 0xee, 0x4c, 0x95, 0x0b, 0x42, 0xfa, 0xc3, 0x4e,</span><br><span class="line">                                0x08, 0x2e, 0xa1, 0x66, 0x28, 0xd9, 0x24, 0xb2, 0x76, 0x5b, 0xa2, 0x49, 0x6d, 0x8b, 0xd1, 0x25,</span><br><span class="line">                                0x72, 0xf8, 0xf6, 0x64, 0x86, 0x68, 0x98, 0x16, 0xd4, 0xa4, 0x5c, 0xcc, 0x5d, 0x65, 0xb6, 0x92,</span><br><span class="line">                                0x6c, 0x70, 0x48, 0x50, 0xfd, 0xed, 0xb9, 0xda, 0x5e, 0x15, 0x46, 0x57, 0xa7, 0x8d, 0x9d, 0x84,</span><br><span class="line">                                0x90, 0xd8, 0xab, 0x00, 0x8c, 0xbc, 0xd3, 0x0a, 0xf7, 0xe4, 0x58, 0x05, 0xb8, 0xb3, 0x45, 0x06,</span><br><span class="line">                                0xd0, 0x2c, 0x1e, 0x8f, 0xca, 0x3f, 0x0f, 0x02, 0xc1, 0xaf, 0xbd, 0x03, 0x01, 0x13, 0x8a, 0x6b,</span><br><span class="line">                                0x3a, 0x91, 0x11, 0x41, 0x4f, 0x67, 0xdc, 0xea, 0x97, 0xf2, 0xcf, 0xce, 0xf0, 0xb4, 0xe6, 0x73,</span><br><span class="line">                                0x96, 0xac, 0x74, 0x22, 0xe7, 0xad, 0x35, 0x85, 0xe2, 0xf9, 0x37, 0xe8, 0x1c, 0x75, 0xdf, 0x6e,</span><br><span class="line">                                0x47, 0xf1, 0x1a, 0x71, 0x1d, 0x29, 0xc5, 0x89, 0x6f, 0xb7, 0x62, 0x0e, 0xaa, 0x18, 0xbe, 0x1b,</span><br><span class="line">                                0xfc, 0x56, 0x3e, 0x4b, 0xc6, 0xd2, 0x79, 0x20, 0x9a, 0xdb, 0xc0, 0xfe, 0x78, 0xcd, 0x5a, 0xf4,</span><br><span class="line">                                0x1f, 0xdd, 0xa8, 0x33, 0x88, 0x07, 0xc7, 0x31, 0xb1, 0x12, 0x10, 0x59, 0x27, 0x80, 0xec, 0x5f,</span><br><span class="line">                                0x60, 0x51, 0x7f, 0xa9, 0x19, 0xb5, 0x4a, 0x0d, 0x2d, 0xe5, 0x7a, 0x9f, 0x93, 0xc9, 0x9c, 0xef,</span><br><span class="line">                                0xa0, 0xe0, 0x3b, 0x4d, 0xae, 0x2a, 0xf5, 0xb0, 0xc8, 0xeb, 0xbb, 0x3c, 0x83, 0x53, 0x99, 0x61,</span><br><span class="line">                                0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0xd6, 0x26, 0xe1, 0x69, 0x14, 0x63, 0x55, 0x21, 0x0c, 0x7d &#125;;</span><br><span class="line">int RC[10] = &#123;0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36&#125;;</span><br><span class="line"></span><br><span class="line">void aes_detail(int content[4][4],  int password[4][4], int encode)&#123; //aes主过程 </span><br><span class="line">    int p[11][4][4];</span><br><span class="line">    keyExpansion(password, p);</span><br><span class="line">    if (encode) &#123;</span><br><span class="line">        addRoundKey(content, p[0]);</span><br><span class="line">        for (int i = 1; i &lt;= 10; ++i) &#123;</span><br><span class="line">            subBytes(content, encode);</span><br><span class="line">            shiftRows(content, encode);</span><br><span class="line">            if (i != 10) &#123;</span><br><span class="line">                mixColumns(content, encode);</span><br><span class="line">            &#125;</span><br><span class="line">            addRoundKey(content, p[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        addRoundKey(content, p[10]);</span><br><span class="line">        for (int i = 9; i &gt;= 0; --i) &#123;</span><br><span class="line">            shiftRows(content, encode);</span><br><span class="line">            subBytes(content, encode);</span><br><span class="line">            addRoundKey(content, p[i]);</span><br><span class="line">            if (i != 0) &#123;</span><br><span class="line">                mixColumns(content, encode);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void subBytes(int a[4][4], int encode)&#123; //字节替换 </span><br><span class="line">    for (int i = 0; i &lt; 4; ++i) &#123;</span><br><span class="line">        for (int j = 0; j &lt; 4; ++j) &#123;</span><br><span class="line">            int temp = a[i][j];</span><br><span class="line">            int row = temp / 16;</span><br><span class="line">            int column = temp % 16;</span><br><span class="line">            if (encode)</span><br><span class="line">                a[i][j] = S_BOX[row][column];</span><br><span class="line">            else</span><br><span class="line">                a[i][j] = INVERSE_S_BOX[row][column];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void shiftRows(int a[4][4], int encode)&#123; //行变换 </span><br><span class="line">    for (int i = 0; i &lt; 4; ++i) &#123;</span><br><span class="line">        for (int j = 0; j &lt; i; ++j) &#123;</span><br><span class="line">            if (encode) &#123;</span><br><span class="line">                int temp = a[i][0];</span><br><span class="line">                a[i][0] = a[i][1];</span><br><span class="line">                a[i][1] = a[i][2];</span><br><span class="line">                a[i][2] = a[i][3];</span><br><span class="line">                a[i][3] = temp;</span><br><span class="line">            &#125; else&#123;</span><br><span class="line">                int temp = a[i][3];</span><br><span class="line">                a[i][3] = a[i][2];</span><br><span class="line">                a[i][2] = a[i][1];</span><br><span class="line">                a[i][1] = a[i][0];</span><br><span class="line">                a[i][0] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void mixColumns(int a[4][4], int encode)&#123; //列混淆 </span><br><span class="line">    for (int i = 0; i &lt; 4; ++i) &#123;</span><br><span class="line">        int temp0 = a[0][i];</span><br><span class="line">        int temp1 = a[1][i];</span><br><span class="line">        int temp2 = a[2][i];</span><br><span class="line">        int temp3 = a[3][i];</span><br><span class="line">        if (encode) &#123;</span><br><span class="line">            a[0][i] = aes_multiple(temp0, 2) ^ aes_multiple(temp1, 3) ^ temp2 ^ temp3;</span><br><span class="line">            a[1][i] = temp0 ^ (aes_multiple(temp1, 2)) ^ (temp2 ^ aes_multiple(temp2, 2)) ^ temp3;</span><br><span class="line">            a[2][i] = temp0 ^ temp1 ^ (aes_multiple(temp2, 2)) ^ (temp3 ^ aes_multiple(temp3, 2));</span><br><span class="line">            a[3][i] = temp0 ^ (aes_multiple(temp0, 2)) ^ temp1 ^ temp2 ^ aes_multiple(temp3, 2);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            a[0][i] = aes_multiple(temp0, 14) ^ aes_multiple(temp1, 11) ^ aes_multiple(temp2, 13) ^ aes_multiple(temp3, 9);</span><br><span class="line">            a[1][i] = aes_multiple(temp0, 9) ^ aes_multiple(temp1, 14) ^ aes_multiple(temp2, 11) ^ aes_multiple(temp3, 13);</span><br><span class="line">            a[2][i] = aes_multiple(temp0, 13) ^ aes_multiple(temp1, 9) ^ aes_multiple(temp2, 14) ^ aes_multiple(temp3, 11);</span><br><span class="line">            a[3][i] = aes_multiple(temp0, 11) ^ aes_multiple(temp1, 13) ^ aes_multiple(temp2, 9) ^ aes_multiple(temp3, 14);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void addRoundKey(int a[4][4], int k[4][4])&#123; //轮密钥加 </span><br><span class="line">    for (int i = 0; i &lt; 4; ++i) &#123;</span><br><span class="line">        for (int j = 0; j &lt; 4; ++j) &#123;</span><br><span class="line">            a[i][j] = a[i][j] ^ k[j][i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int aes_multiple(int a, int le)&#123; //列混淆 </span><br><span class="line">    int thr = le &amp; 0x8;</span><br><span class="line">    int sec = le &amp; 0x4;</span><br><span class="line">    int fir = le &amp; 0x2;</span><br><span class="line">    int fir_mod = le % 2;</span><br><span class="line">    int result = 0;</span><br><span class="line">    if (thr)&#123;</span><br><span class="line">        int b = a;</span><br><span class="line">        for (int i = 1; i &lt;=3 ; ++i) &#123;</span><br><span class="line">            b = b&lt;&lt;1;</span><br><span class="line">            if (b &gt;= 256)</span><br><span class="line">                b = b ^ 0x11b;</span><br><span class="line">        &#125;</span><br><span class="line">        b = b % 256;</span><br><span class="line">        result = result ^ b;</span><br><span class="line">    &#125;</span><br><span class="line">    if (sec)&#123;</span><br><span class="line">        int b = a;</span><br><span class="line">        for (int i = 1; i &lt;=2 ; ++i) &#123;</span><br><span class="line">            b = b&lt;&lt;1;</span><br><span class="line">            if (b &gt;= 256)</span><br><span class="line">                b = b ^ 0x11b;</span><br><span class="line">        &#125;</span><br><span class="line">        b = b % 256;</span><br><span class="line">        result = result ^ b;</span><br><span class="line">    &#125;</span><br><span class="line">    if (fir)&#123;</span><br><span class="line">        int b = a &lt;&lt; 1;</span><br><span class="line">        if (b &gt;= 256)</span><br><span class="line">            b = b ^ 0x11b;//按位异或 </span><br><span class="line">        b = b % 256;//求mod </span><br><span class="line">        result = result ^ b;//异或 </span><br><span class="line">    &#125;</span><br><span class="line">    if (fir_mod)</span><br><span class="line">        result = result ^ a;</span><br><span class="line">    return  result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void keyExpansion(int key[4][4], int w[11][4][4])&#123; //扩展密钥 </span><br><span class="line">    for (int i = 0; i &lt; 4; ++i) &#123;</span><br><span class="line">        for (int j = 0; j &lt; 4; ++j) &#123;</span><br><span class="line">            w[0][i][j] = key[j][i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 1; i &lt; 11; ++i)&#123;</span><br><span class="line">        for (int j = 0; j &lt; 4; ++j) &#123;</span><br><span class="line">            int temp[4];</span><br><span class="line">            if (j == 0)&#123;</span><br><span class="line">                temp[0] = w[i-1][3][1];</span><br><span class="line">                temp[1] = w[i-1][3][2];</span><br><span class="line">                temp[2] = w[i-1][3][3];</span><br><span class="line">                temp[3] = w[i-1][3][0];</span><br><span class="line">                for (int k = 0; k &lt; 4; ++k) &#123;</span><br><span class="line">                    int m = temp[k];</span><br><span class="line">                    int row = m / 16;</span><br><span class="line">                    int column = m % 16;</span><br><span class="line">                    temp[k] = S_BOX[row][column];</span><br><span class="line">                    if (k == 0)&#123;</span><br><span class="line">                        temp[k] = temp[k] ^ RC[i-1];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; else&#123;</span><br><span class="line">                temp[0] = w[i][j-1][0];</span><br><span class="line">                temp[1] = w[i][j-1][1];</span><br><span class="line">                temp[2] = w[i][j-1][2];</span><br><span class="line">                temp[3] = w[i][j-1][3];</span><br><span class="line">            &#125;</span><br><span class="line">            for (int l = 0; l &lt; 4; ++l) &#123;</span><br><span class="line"></span><br><span class="line">                w[i][j][l] = w[i-1][j][l] ^ temp[l];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int c2i(char ch) &#123;</span><br><span class="line">    if(isdigit(ch))</span><br><span class="line">        return ch - 48;</span><br><span class="line">    if( ch &lt; &apos;A&apos; || (ch &gt; &apos;F&apos; &amp;&amp; ch &lt; &apos;a&apos;) || ch &gt; &apos;z&apos; )</span><br><span class="line">        return -1;</span><br><span class="line">    if(isalpha(ch))</span><br><span class="line">        return isupper(ch) ? ch - 55 : ch - 87;</span><br><span class="line">    return -1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int findfirstfile_lock() //批量加密 </span><br><span class="line">&#123;</span><br><span class="line">    WIN32_FIND_DATA FindFileData;</span><br><span class="line">    HANDLE hFind;</span><br><span class="line"> </span><br><span class="line">    hFind = FindFirstFile(&quot;E:\\待加密\\*.txt&quot;, &amp;FindFileData);</span><br><span class="line">    if (hFind == INVALID_HANDLE_VALUE) </span><br><span class="line">    &#123;</span><br><span class="line">        printf (&quot;FindFirstFile failed (%d)\n&quot;, GetLastError());</span><br><span class="line">        return -2;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    do</span><br><span class="line">    &#123; </span><br><span class="line">    int method = 1;</span><br><span class="line">    </span><br><span class="line">    char x[50];</span><br><span class="line">    char y[50];</span><br><span class="line">    char z[50];</span><br><span class="line">    char source_path[50];</span><br><span class="line">    char des_path[50];</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">	strcpy(x,&quot;E:\\\\待加密\\\\&quot;);</span><br><span class="line">	strcpy(y,&quot;E:\\\\已加密\\\\&quot;);</span><br><span class="line">	strcpy(source_path,FindFileData.cFileName);</span><br><span class="line">	strcpy(des_path,FindFileData.cFileName);</span><br><span class="line">	strcat(x,source_path);</span><br><span class="line">	strcat(y,des_path);</span><br><span class="line">	const char * password = &quot;0f1571c947d9e8590cb7add6af7f6798&quot;;</span><br><span class="line">	</span><br><span class="line">    int p[4][4];</span><br><span class="line">    for (int m = 0; m &lt; 4; ++m) &#123;</span><br><span class="line">        for (int i = 0; i &lt; 4; ++i) &#123;</span><br><span class="line">            int indx = 4 * i + m;</span><br><span class="line">            p[i][m] = 16 * c2i(password[indx]) + c2i(password[indx + 1]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    FILE *file = fopen(x, &quot;r&quot;);</span><br><span class="line">    fseek(file, 0, SEEK_END);</span><br><span class="line">    int len = ftell(file);</span><br><span class="line">    rewind(file);</span><br><span class="line">    int size = len;</span><br><span class="line">    if (len % 16 != 0) &#123;</span><br><span class="line">        size = (len / 16 + 1) * 16;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    unsigned char content[size];</span><br><span class="line">    fread(content, 1, len, file);</span><br><span class="line">    for (int j = len; j &lt; size; ++j) &#123;</span><br><span class="line">        content[j] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(file);</span><br><span class="line">    </span><br><span class="line">    unsigned char encry[size];</span><br><span class="line">    for (int i = 0; i &lt; size / 16; ++i) &#123;</span><br><span class="line">        int content_to_int[4][4];</span><br><span class="line">        for (int j = 0; j &lt; 4; ++j) &#123;</span><br><span class="line">            for (int k = 0; k &lt; 4; ++k) &#123;</span><br><span class="line">                content_to_int[j][k] = content[j * 4 + k + 16 * i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        aes_detail(content_to_int, p, method);</span><br><span class="line">        for (int j = 0; j &lt; 4; ++j) &#123;</span><br><span class="line">            for (int k = 0; k &lt; 4; ++k) &#123;</span><br><span class="line">                encry[j * 4 + k + 16 * i] = content_to_int[j][k];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    FILE *file1 = fopen(y, &quot;w&quot;);</span><br><span class="line">    fwrite(encry, size, 1, file1);</span><br><span class="line">    fflush(file1);</span><br><span class="line">    fclose(file1);</span><br><span class="line">    &#125; while (FindNextFile(hFind, &amp;FindFileData));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int findfirstfile_unlock()//批量解密 </span><br><span class="line">&#123;</span><br><span class="line">    WIN32_FIND_DATA FindFileData;</span><br><span class="line">    HANDLE hFind;</span><br><span class="line"> </span><br><span class="line">    hFind = FindFirstFile(&quot;E:\\已加密\\*.txt&quot;, &amp;FindFileData);</span><br><span class="line">    if (hFind == INVALID_HANDLE_VALUE) </span><br><span class="line">    &#123;</span><br><span class="line">        printf (&quot;FindFirstFile failed (%d)\n&quot;, GetLastError());</span><br><span class="line">        return -2;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    do</span><br><span class="line">    &#123; </span><br><span class="line">    int method = 0;</span><br><span class="line">    char x[50];</span><br><span class="line">    char y[50];</span><br><span class="line">    char source_path[50];</span><br><span class="line">    char des_path[50];  </span><br><span class="line">	strcpy(x,&quot;E:\\\\已加密\\\\&quot;);</span><br><span class="line">	strcpy(y,&quot;E:\\\\已解密\\\\&quot;);</span><br><span class="line">	strcpy(source_path,FindFileData.cFileName);</span><br><span class="line">	strcpy(des_path,FindFileData.cFileName);</span><br><span class="line">	strcat(x,source_path);</span><br><span class="line">	strcat(y,des_path);</span><br><span class="line">	const char * password = &quot;0f1571c947d9e8590cb7add6af7f6798&quot;;</span><br><span class="line">	</span><br><span class="line">    int p[4][4];</span><br><span class="line">    for (int m = 0; m &lt; 4; ++m) &#123;</span><br><span class="line">        for (int i = 0; i &lt; 4; ++i) &#123;</span><br><span class="line">            int indx = 4 * i + m;</span><br><span class="line">            p[i][m] = 16 * c2i(password[indx]) + c2i(password[indx + 1]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    FILE *file = fopen(x, &quot;r&quot;);</span><br><span class="line">    fseek(file, 0, SEEK_END);</span><br><span class="line">    int len = ftell(file);</span><br><span class="line">    rewind(file);</span><br><span class="line">    int size = len;</span><br><span class="line">    if (len % 16 != 0) &#123;</span><br><span class="line">        size = (len / 16 + 1) * 16;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    unsigned char content[size];</span><br><span class="line">    fread(content, 1, len, file);</span><br><span class="line">    for (int j = len; j &lt; size; ++j) &#123;</span><br><span class="line">        content[j] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(file);</span><br><span class="line">    </span><br><span class="line">    unsigned char encry[size];</span><br><span class="line">    for (int i = 0; i &lt; size / 16; ++i) &#123;</span><br><span class="line">        int content_to_int[4][4];</span><br><span class="line">        for (int j = 0; j &lt; 4; ++j) &#123;</span><br><span class="line">            for (int k = 0; k &lt; 4; ++k) &#123;</span><br><span class="line">                content_to_int[j][k] = content[j * 4 + k + 16 * i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        aes_detail(content_to_int, p, method);</span><br><span class="line">        for (int j = 0; j &lt; 4; ++j) &#123;</span><br><span class="line">            for (int k = 0; k &lt; 4; ++k) &#123;</span><br><span class="line">                encry[j * 4 + k + 16 * i] = content_to_int[j][k];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    FILE *file1 = fopen(y, &quot;w&quot;);</span><br><span class="line">    fwrite(encry, size, 1, file1);</span><br><span class="line">    fflush(file1);</span><br><span class="line">    fclose(file1);</span><br><span class="line">    &#125; while (FindNextFile(hFind, &amp;FindFileData));</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int menu()&#123;</span><br><span class="line">	int i;</span><br><span class="line">	system(&quot;cls&quot;);</span><br><span class="line">		cout&lt;&lt;&quot;AES文件加密系统&quot;&lt;&lt;endl;</span><br><span class="line">		cout&lt;&lt;&quot;  1、加密&quot;&lt;&lt;endl;</span><br><span class="line">		cout&lt;&lt;&quot;  2、解密&quot;&lt;&lt;endl;</span><br><span class="line">		cout&lt;&lt;&quot;  0、退出&quot;&lt;&lt;endl;</span><br><span class="line">		cin&gt;&gt;i;</span><br><span class="line">//		while(!(i&gt;=0&amp;&amp;i&lt;=2))</span><br><span class="line">//		cin&gt;&gt;i;</span><br><span class="line">		return i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123; //主程序 </span><br><span class="line">	re:</span><br><span class="line">	int i = 0;</span><br><span class="line">		system(&quot;cls&quot;);</span><br><span class="line">		i=menu();</span><br><span class="line">	&#123;</span><br><span class="line">		if(i == 1) </span><br><span class="line">		&#123;</span><br><span class="line">		findfirstfile_lock(); cout&lt;&lt;&quot;加密完成&quot;&lt;&lt;endl; system(&quot;pause&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		else if(i == 2) </span><br><span class="line">		&#123;</span><br><span class="line">		findfirstfile_unlock(); cout&lt;&lt;&quot;解密完成&quot;&lt;&lt;endl; system(&quot;pause&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		else </span><br><span class="line">		&#123;</span><br><span class="line">		cout&lt;&lt;&quot;已退出&quot;&lt;&lt;endl; exit(0);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	goto re;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="待更新。。。"><a href="#待更新。。。" class="headerlink" title="待更新。。。"></a>待更新。。。</h2>
+      
+    </div>
+    
+    
+    
+<div>
+      
+        
+
+      
+</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Cryptography/" rel="tag"># Cryptography</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/机器学习/Python机器学习（四）/" rel="next" title="Python机器学习（四）">
+                <i class="fa fa-chevron-left"></i> Python机器学习（四）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar_g.jpg" alt="Cao Yihao">
+            
+              <p class="site-author-name" itemprop="name">Cao Yihao</p>
+              <p class="site-description motion-element" itemprop="description">兴趣使然的无名小站</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/deepdarkfans" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:cyh19981997@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/cyh1997" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.baidu.com/" title="Baidu" target="_blank">Baidu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.google.com/" title="Google" target="_blank">Google</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#密码学（Cryptography）"><span class="nav-number">1.</span> <span class="nav-text">密码学（Cryptography）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密"><span class="nav-number">1.1.1.</span> <span class="nav-text">对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密（公钥加密）"><span class="nav-number">1.1.2.</span> <span class="nav-text">非对称加密（公钥加密）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AES加密详解"><span class="nav-number">1.2.</span> <span class="nav-text">AES加密详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-算法流程"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1. 算法流程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#字节替代"><span class="nav-number">1.2.0.1.1.</span> <span class="nav-text">字节替代</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#行移位"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">行移位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列混淆"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">列混淆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轮密钥加"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">轮密钥加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#密钥拓展算法"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">密钥拓展算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.2.1.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码"><span class="nav-number">1.2.2.</span> <span class="nav-text">源码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待更新。。。"><span class="nav-number">1.3.</span> <span class="nav-text">待更新。。。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">true</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://blog-etellfvhpu.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://www.deepdark.com/密码学/2019-10-06-密码学概论/';
+          this.page.identifier = '密码学/2019-10-06-密码学概论/';
+          this.page.title = '密码学概论';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://blog-etellfvhpu.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

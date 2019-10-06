@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.deepdark.com/"/>
-  <updated>2019-06-11T05:09:14.812Z</updated>
+  <updated>2019-10-06T12:10:54.903Z</updated>
   <id>https://www.deepdark.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>密码学概论</title>
+    <link href="https://www.deepdark.com/%E5%AF%86%E7%A0%81%E5%AD%A6/2019-10-06-%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%AE%BA/"/>
+    <id>https://www.deepdark.com/密码学/2019-10-06-密码学概论/</id>
+    <published>2019-10-06T12:08:29.896Z</published>
+    <updated>2019-10-06T12:10:54.903Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;br&gt;最近要讲密码学，只能从操旧业，把几年前已经扔掉的密码学在捡起来。买了本密码学原理与实践，在csdn上看了几篇博客，开始。老长时间没更新了，毕竟没人看，百度也不收录，没动力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;密码学（Cryptography）&quot;&gt;&lt;a href=&quot;#密码学（Cryptography）&quot; class=&quot;headerlink&quot; title=&quot;密码学（Cryptography）&quot;&gt;&lt;/a&gt;密码学（Cryptography）&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;密码学已经有了几千年的历史，一般来说，特指1949年以后的为现代密码学，之前的有近代密码学和古典密码学之分，这两种基本上很好理解，都是字符的移位或者整一个替换表，一个一个加密和解密，密码学的真正发展实在与数学以及计算机结合起来之后而建立的一个有着数学基础作为支撑的一门学科。其中属对称加密最为经典，而之后发明的公钥加密（也就是非对称加密），也完善了对称加密的不足和弥补了对称加密的空白。这里我们简要概述一下对称和非对称，其他先不作为重点。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="密码学" scheme="https://www.deepdark.com/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+    
+      <category term="Cryptography" scheme="https://www.deepdark.com/tags/Cryptography/"/>
+    
+  </entry>
   
   <entry>
     <title>Python机器学习（四）</title>
@@ -348,29 +371,6 @@
   </entry>
   
   <entry>
-    <title>自己的第一篇博客</title>
-    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://www.deepdark.com/日常/2019-04-16-第一篇博客/</id>
-    <published>2019-04-15T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.158Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;先test一哈&quot;&gt;&lt;a href=&quot;#先test一哈&quot; class=&quot;headerlink&quot; title=&quot;先test一哈&quot;&gt;&lt;/a&gt;&lt;strong&gt;先test一哈&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;马上毕业，先搞个代码块&lt;br&gt;&lt;figure class=&quot;hig
-      
-    
-    </summary>
-    
-      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="日常" scheme="https://www.deepdark.com/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>试一下插入图片</title>
     <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     <id>https://www.deepdark.com/日常/2019-04-16-插入图片/</id>
@@ -390,6 +390,29 @@
     
     
       <category term="Daily" scheme="https://www.deepdark.com/tags/Daily/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己的第一篇博客</title>
+    <link href="https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2019-04-16-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://www.deepdark.com/日常/2019-04-16-第一篇博客/</id>
+    <published>2019-04-15T16:00:00.000Z</published>
+    <updated>2019-05-07T09:14:47.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;先test一哈&quot;&gt;&lt;a href=&quot;#先test一哈&quot; class=&quot;headerlink&quot; title=&quot;先test一哈&quot;&gt;&lt;/a&gt;&lt;strong&gt;先test一哈&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;马上毕业，先搞个代码块&lt;br&gt;&lt;figure class=&quot;hig
+      
+    
+    </summary>
+    
+      <category term="日常" scheme="https://www.deepdark.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="日常" scheme="https://www.deepdark.com/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
@@ -464,31 +487,6 @@
       <category term="Swift" scheme="https://www.deepdark.com/tags/Swift/"/>
     
       <category term="GCD" scheme="https://www.deepdark.com/tags/GCD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Swift 4 新特性</title>
-    <link href="https://www.deepdark.com/%E7%BC%96%E7%A8%8B/2017-09-11-Swift-4-%E6%96%B0%E7%89%B9%E6%80%A7/"/>
-    <id>https://www.deepdark.com/编程/2017-09-11-Swift-4-新特性/</id>
-    <published>2017-09-10T16:00:00.000Z</published>
-    <updated>2019-05-07T09:14:47.159Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;private-权限扩大&quot;&gt;&lt;a href=&quot;#private-权限扩大&quot; class=&quot;headerlink&quot; title=&quot;private 权限扩大&quot;&gt;&lt;/a&gt;private 权限扩大&lt;/h3&gt;&lt;p&gt;在 Swift 4 中，&lt;code&gt;extension&lt;/c
-      
-    
-    </summary>
-    
-      <category term="编程" scheme="https://www.deepdark.com/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="iOS" scheme="https://www.deepdark.com/tags/iOS/"/>
-    
-      <category term="Swift" scheme="https://www.deepdark.com/tags/Swift/"/>
     
   </entry>
   
