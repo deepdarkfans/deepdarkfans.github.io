@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.deepdark.com/"/>
-  <updated>2019-10-07T12:28:11.413Z</updated>
+  <updated>2019-10-07T12:30:22.617Z</updated>
   <id>https://www.deepdark.com/</id>
   
   <author>
@@ -21,15 +21,13 @@
     <link href="https://www.deepdark.com/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>https://www.deepdark.com/数学/概率论与数理统计基础（一）/</id>
     <published>2019-10-07T10:26:05.969Z</published>
-    <updated>2019-10-07T12:28:11.413Z</updated>
+    <updated>2019-10-07T12:30:22.617Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;blockquote&gt;
-&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;专硕的痛苦，考研没考概率，上数学课 随机过程根本听不懂。于是又把考研的概率给看了一遍，临时做了笔记，现在整理成文章
-      
+      &lt;blockquote&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;专硕的痛苦，考研没考概率，上数学课 随机过程根本听不懂。于是又把考研的概率给看了一遍，临时做了笔记，现在整理成文章。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -277,6 +275,27 @@
   </entry>
   
   <entry>
+    <title>Ubuntu配置PPPOE拨号上网</title>
+    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-30-ubuntu%E8%AE%BE%E7%BD%AEpppoe%E6%8B%A8%E5%8F%B7%E4%B8%8A%E7%BD%91/"/>
+    <id>https://www.deepdark.com/技术/2019-4-30-ubuntu设置pppoe拨号上网/</id>
+    <published>2019-04-29T16:00:00.000Z</published>
+    <updated>2019-05-20T05:53:44.685Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;PPPOE拨号上网&quot;&gt;&lt;a href=&quot;#PPPOE拨号上网&quot; class=&quot;headerlink&quot; title=&quot;PPPOE拨号上网&quot;&gt;&lt;/a&gt;PPPOE拨号上网&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/selous/article/details/55520765&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文链接&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Linux" scheme="https://www.deepdark.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Github的图床制作</title>
     <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-04-30-github%E5%9B%BE%E5%BA%8A%E5%88%B6%E4%BD%9C/"/>
     <id>https://www.deepdark.com/技术/2019-04-30-github图床制作/</id>
@@ -297,27 +316,6 @@
     
     
       <category term="Markdown" scheme="https://www.deepdark.com/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu配置PPPOE拨号上网</title>
-    <link href="https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-30-ubuntu%E8%AE%BE%E7%BD%AEpppoe%E6%8B%A8%E5%8F%B7%E4%B8%8A%E7%BD%91/"/>
-    <id>https://www.deepdark.com/技术/2019-4-30-ubuntu设置pppoe拨号上网/</id>
-    <published>2019-04-29T16:00:00.000Z</published>
-    <updated>2019-05-20T05:53:44.685Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;PPPOE拨号上网&quot;&gt;&lt;a href=&quot;#PPPOE拨号上网&quot; class=&quot;headerlink&quot; title=&quot;PPPOE拨号上网&quot;&gt;&lt;/a&gt;PPPOE拨号上网&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/selous/article/details/55520765&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文链接&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.deepdark.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Linux" scheme="https://www.deepdark.com/tags/Linux/"/>
     
   </entry>
   
