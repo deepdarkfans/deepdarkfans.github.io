@@ -286,6 +286,271 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/数学/概率论与数理统计基础（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cao Yihao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar_g.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyh Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/数学/概率论与数理统计基础（一）/" itemprop="url">概率论与数理统计（一）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-07T18:26:05+08:00">
+                2019-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/数学/概率论与数理统计基础（一）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="数学/概率论与数理统计基础（一）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  770
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>专硕的痛苦，考研没考概率，上数学课 随机过程根本听不懂。于是又把考研的概率给看了一遍，临时做了笔记，现在整理成文章。</p>
+</blockquote>
+<h1 id="随机事件与概率"><a href="#随机事件与概率" class="headerlink" title="随机事件与概率"></a>随机事件与概率</h1><p>本篇是笼统的介绍了一下概率论的内容，也是最简单的。此节分为三个部分：</p>
+<ol>
+<li>古典概型</li>
+<li>几何概型</li>
+<li>重要公式</li>
+</ol>
+<p>下面来一个个讲解。</p>
+<h2 id="古典概型"><a href="#古典概型" class="headerlink" title="古典概型"></a>古典概型</h2><p>定义：若样本空间有有限个样本点，成为古典概型（要求所有样本的发生概率相同）公式为：</p>
+<script type="math/tex; mode=display">
+P(A)={A中样本数 \over 样本总数}</script><blockquote>
+<p>【注】：试验（E）所需条件</p>
+<ol>
+<li>同等条件可重复</li>
+<li>实验结果不止一个</li>
+<li>实验前不知何种结果会出现</li>
+</ol>
+<p>$\Omega \to 样本空间$</p>
+</blockquote>
+<p>古典概型有以下几种经典问题：</p>
+<ol>
+<li>随机分配（占位）</li>
+</ol>
+<p>如n个球中放N个盒子中，求概率。</p>
+<ol>
+<li>简单随机抽样</li>
+</ol>
+<p>袋子中有五个球，三白二黑，有放回和无放回抽取等。</p>
+<h2 id="几何概型（重点）"><a href="#几何概型（重点）" class="headerlink" title="几何概型（重点）"></a>几何概型（重点）</h2><p>定义：若$\Omega$是一个可度量的几何区域，那么样本点落入子区域A的概率与子区域A的度量成正比，与A的位置，形状无关。公式为：</p>
+<script type="math/tex; mode=display">
+P(A)={A的度量 \over \Omega 的度量}</script><p>【例子】：随机取两正数x，y，这两正数中有一个不超过1，求$x+y&lt;1$和$xy&lt;0.09$的概率。</p>
+<p>【分析】：画出$x+y=1$和$xy=0.09$的函数图像之后用积分算出面积再比上总面积即可，算式如下：</p>
+<script type="math/tex; mode=display">
+{\int_{0.1}^{0.9}1-x-{0.09 \over x}dx \over 1 } \approx 0.2</script><h2 id="重要公式求概率"><a href="#重要公式求概率" class="headerlink" title="重要公式求概率"></a>重要公式求概率</h2><p>这里举出了很很多概率公式的四则运算以及化简.</p>
+<ul>
+<li><strong>对立事件公式</strong></li>
+</ul>
+<script type="math/tex; mode=display">
+P(A)=1-P(\overline{A})</script><ul>
+<li><strong>加法公式</strong></li>
+</ul>
+<p>(1) $P(A+B)={P(A)+P(B)-P(AB)}$</p>
+<p>(2) $P(A+B+C)={P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)} $</p>
+<blockquote>
+<p>【注】：若$A_1,A_2….A_n$两两互斥（即有$A_jA_i=\varnothing$）,则有$P(A_1+…A_n)={\sum_{i=1}^nP(A_i)}$</p>
+<p>事件互相独立，则有</p>
+<script type="math/tex; mode=display">
+P(A_{i1}A{i2}....A{in})={P(A_{i1})P(A_{i2})....P(A_{in})}</script></blockquote>
+<ul>
+<li><strong>减法公式</strong></li>
+</ul>
+<script type="math/tex; mode=display">
+P(A\overline{B})=P(A-B)=P(A)-P(AB)</script><ul>
+<li><strong>独立公式</strong></li>
+</ul>
+<p>若事件A,B相互独立，则有</p>
+<script type="math/tex; mode=display">
+\overline{A},\overline{B}独立</script><script type="math/tex; mode=display">
+\overline{A},B独立</script><script type="math/tex; mode=display">
+A,\overline{B}独立</script><p>于是，若$A_1,A_2….A_n$相互独立，则有</p>
+<script type="math/tex; mode=display">
+1-\prod_{i=1}^n(1-P(\overline{A_i}))</script><ul>
+<li><strong>条件概率（除法）</strong></li>
+</ul>
+<script type="math/tex; mode=display">
+P(A|B)={P(AB) \over P(B)},P(B)>0</script><p>其中$P(A|B)$指在B事件发生下A事件发生的概率</p>
+<p>扩展:</p>
+<script type="math/tex; mode=display">
+P(A_1A_2A_3)={P(A_1)P(A_2|A_1)P(A_3|A_2A_1)}</script><ul>
+<li><strong>全概率公式</strong></li>
+</ul>
+<p>【引例】一个村子有三个小偷$A_1,A_2,A_3$，求事件$B=\{村子失窃\}$的概率</p>
+<p>【分析】若$A\cup B\cup C=\Omega$,且$AB,AC,BC=\varnothing$,则称事件ABC为完备事件组，显然题中的三个为完备事件组。则有以下全概率公式;</p>
+<script type="math/tex; mode=display">
+\begin{equation}\begin{split} 
+P(B)&=P(BA_1 \cup BA_2 \cup BA_3)\\
+&=P(BA_1)+P(BA_2)+P(BA_3)\\
+&=P(B|A_1)P(A_1)+P(B|A_2)P(A_2)+P(B|A_3)P(A_3)
+\end{split}\end{equation}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+<div>
+      
+</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/密码学/2019-10-06-密码学概论/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1587,7 +1852,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://cyhblog.oss-cn-beijing.aliyuncs.com/5a129876ef82b.jpg" rel="gallery_ck1exvi8i001ibwvb9rzezugz" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://cyhblog.oss-cn-beijing.aliyuncs.com/5a129876ef82b.jpg" rel="gallery_ck1gdtnlp001prcvbx95jz3eb" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://cyhblog.oss-cn-beijing.aliyuncs.com/5a129876ef82b.jpg" itemprop="contentUrl">
               </a>
             
@@ -2035,202 +2300,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.deepdark.com/日常/2019-05-02-Ubuntu中服务器踩坑记录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Cao Yihao">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar_g.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cyh Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/日常/2019-05-02-Ubuntu中服务器踩坑记录/" itemprop="url">Ubuntu中服务器踩坑记录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-02T00:00:00+08:00">
-                2019-05-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/日常/" itemprop="url" rel="index">
-                    <span itemprop="name">日常</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/日常/2019-05-02-Ubuntu中服务器踩坑记录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="日常/2019-05-02-Ubuntu中服务器踩坑记录/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  472
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Ubuntu中服务器踩坑记录"><a href="#Ubuntu中服务器踩坑记录" class="headerlink" title="Ubuntu中服务器踩坑记录"></a>Ubuntu中服务器踩坑记录</h1><p>今天刚恰完饭回来打开电脑准备看看我的毕业设计，发现Apache服务器和Mysql服务统统启动不了了，提示如下图</p>
-<p><img src="https://raw.githubusercontent.com/deepdarkfans/img/master/img/2019-05-0216-00-18%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p>当时很是懵逼，我寻思着我前几天也没动啊，咋就这样了？linux这么不稳定？然后试着输入命令行<code>systemctl status.mysql.service</code>和<code>systemctl status apache.service</code>,看看啥子情况，mysql的显示如下：</p>
-<p><img src="https://raw.githubusercontent.com/deepdarkfans/img/master/img/2019-05-0216-00-27%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<h2 id="1-apache修复"><a href="#1-apache修复" class="headerlink" title="1. apache修复"></a>1. apache修复</h2><p>apache的图没有截，但是显示的错误结果非常清楚：<code>Cannot access directory &#39;/var/log/apache2/&#39;</code>，然后我去了目录下面看了看，发现没这个文件夹，我突然想到前几天下了个垃圾清理文件<strong>Stacer</strong>，可能把我的日志给清了，于是我新建了个目录，给了755权限，然后再启动，成功！</p>
-<h2 id="2-mysql修复"><a href="#2-mysql修复" class="headerlink" title="2. mysql修复"></a>2. mysql修复</h2><p>然后是mysql的问题，上面的图根本没有显示出问题。。。我在一篇<a href="https://blog.csdn.net/zhj082/article/details/80783883" target="_blank" rel="noopener">博客</a>下面找到了答案，原来在<code>/var/log/</code>下面还有个<code>syslog</code>文件，里面可看到系统各个进程的日志。于是我看了看mysql的，显示如下：</p>
-<p><img src="https://raw.githubusercontent.com/deepdarkfans/img/master/img/2019-05-0216-01-54%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p>第一行就有一个报错<code>2019-05-02T07:40:56.158932Z 0 [ERROR] Could not open file &#39;/var/log/mysql/error.log&#39; for error logging: No such file or directory</code>，原来又是那个软件把我mysql的日志文件给清了！艹，而且这服务器也不智能，没有自己创建一个，只会报错。。。然后我在这目录下面创建了这个文件，给了755权限，发现还是启动失败？？？我看了一眼syslog，如图</p>
-<p><img src="https://raw.githubusercontent.com/deepdarkfans/img/master/img/2019-05-0216-02-10%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt></p>
-<p>报错为<code>2019-05-02T07:44:37.657516Z 0 [ERROR] Could not open file &#39;/var/log/mysql/error.log&#39; for error logging: Permission denied</code>，喜闻乐见的<strong>Premission denied</strong>,于是我给了777权限，启动成功。</p>
-<h2 id="3-小结"><a href="#3-小结" class="headerlink" title="3. 小结"></a>3. 小结</h2><p>没啥小结，就是以后再也别用垃圾清理软件随便清理log了！！！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-<div>
-      
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2283,7 +2352,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2294,7 +2363,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2305,7 +2374,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
