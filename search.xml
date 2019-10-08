@@ -34,9 +34,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python机器学习（二）]]></title>
-    <url>%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%2FPython%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[前言因为多变量分析内容太多，而且涉及很多的统计学基础（绝大部分高中都学过），所以这一章算是复习，分两篇来写。 数据分析之多变量分析Multivariate Analysis（多变量分析）多变量分析的意义就是研究多种自变量而得到因变量的表现。这看起来比单变量分析更加的真实和可靠，毕竟在现实生活中，各个事物都是互相联系的。 按生日和性别分析南希认为同一时期的男性用户使用频率要远大于女性用户。因为根据之前的表图，男性用户使用总次数要远多于女性。艾瑞克认为研究这个方面的最好的办法就是绘制一个堆叠柱状图（stacked bar graph）（柱状图中每一个柱都有两种以上的颜色，这里颜色代表性别）代码如下： 123groupby_birthyear_gender = data.groupby([&apos;birthyear&apos;, &apos;gender&apos;])[&apos;birthyear&apos;].count().unstack(&apos;gender&apos;).fillna(0)#以出生年月和性别排序，并将性别的索引由列改为行groupby_birthyear_gender[[&apos;Male&apos;,&apos;Female&apos;,&apos;Other&apos;]].plot.bar(title = &apos;Distribution of birth years by Gender&apos;, stacked=True, figsize = (15,4))plt.show() Output： 代码含义：我们先将数据帧的列索引用unstack函数给转换为行索引，之后，将gender这一个列给分为三种：男，女，其他。这样我们就有了三种性别的不同的行程总数。 由图可知男士的确占大多数，但是也有例外。比如1947年出生的人使用单车的全为女性。1964和1994的人也大多是女性。 按生日和用户类型分析在之前对80后用户的分析来看，所有的用户都是会员。南希非常好奇其他的年龄段的会员占比是多少？难道大多数都是普通用户？于是艾瑞克开始对生日和用户类型进行分析：123groupby_birthyear_usertype=data.groupby([&apos;birthyear&apos;,&apos;usertype&apos;])[&apos;birthyear&apos;].count().unstack(&apos;usertype&apos;).fillna(0)#以出生年月和用户类型排序，并将用户类型的索引由列改为行groupby_birthyear_usertype[&apos;Member&apos;].plot.bar(title=&apos;Distribution of birth years by Usertype&apos;,stacked=True,figsize=(15,4))plt.show() Output： 南希看了非常惊讶：咋全都是会员？难道只有正式会员才需要填写生日？艾瑞克决定验证一下1print(data[data[&apos;usertype&apos;]==&apos;Short-Term Pass Holder&apos;][&apos;birthyear&apos;].isnull().values.all())#验证普通会员是否有出生年月 Output：1True 果然，普通用户并没有填写生日。同样的，艾瑞克又验证了一下普通用户是否填写了性别，结果也是没有填写。说明我们没有任何关于普通用户的身份数据。南希不得不重新考虑之前的推断：关于80后的品牌忠诚度。因为根本不知道80后的会员在80后总人数占多少。这个数据废弃了南希之前的推断。 时间序列分析南希想知道基于开始日期的行程的频数。于是艾瑞克不得不把起始日期给转换为日期字符格式，他还做了更多，将日期拆分为多个小段（年，月，日，小时等）。 代码如下：12345678910List_=list(data[&apos;starttime&apos;])#把开始时间转换时间字符串List_=[datetime.datetime.strptime(x, &quot;%m/%d/%Y %H:%M&quot;) for x in List_]#将时间字符串转换为时间元组data[&apos;starttime_mod&apos;]=pd.Series(List_,index=data.index)#Series函数创建索引data[&apos;starttime_date&apos;] = pd.Series([x.date() for x in List_],index=data.index)data[&apos;starttime_year&apos;] = pd.Series([x.year for x in List_],index=data.index)data[&apos;starttime_month&apos;] = pd.Series([x.month for x in List_],index=data.index)data[&apos;starttime_day&apos;] = pd.Series([x.day for x in List_],index=data.index)data[&apos;starttime_hour&apos;] = pd.Series([x.hour for x in List_],index=data.index)data.groupby(&apos;starttime_date&apos;)[&apos;tripduration&apos;].mean().plot.bar(title = &apos;Distribution of Trip duration by date&apos;, figsize = (15,4))plt.show() Output： 这个表格看起来有一种显而易见的走势。这就引出了时间序列的一些定义。 Time Series Components下面是时间序列中最常见的三种走势图。 Seasonal Pattern（季节性走势）如图所示，季节性走势总是有着时间规律，这些时期可以是一月中的周数，一年中的周数，也可以是一年中的月数。 Cyclic Pattern（循环走势）循环走势唯一与季节性走势不同之处在于循环走势没有时间上的规律。 Trend（趋势）趋势就是一段宏观上来看上升或降低的连续变量。这种走势可能不是很精准的线性走势，but when smoothing is applied it can generalize into either of the direction.（这句话不会翻译，大概意思知道） 由这几个走势；来看，南希认为这个时间行程的走势明显是季节性走势。因为这个图的趋势总是有一段精确的时间间隔，这就是季节性。事实上，我们可以把分布给分为三种类型。一种是季节性，就是每隔一段时间就会重复。一种是水平密度分布（flat density distribution），第三种就是线性分布。 到这第二部分完毕]]></content>
+    <title><![CDATA[Python机器学习（四）]]></title>
+    <url>%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%2FPython%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%94%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[kNN算法实例 本篇主要学到了kNN算法在实际生活中的运用，这里是实例之一：海伦约会 提出需求原文：My friend Hellen has been using some online dating sites to find different people togo out with. She realized that despite the site’s recommendations, she didn’t likeeveryone she was matched with. After some introspection, she realized there werethree types of people she went out with: People she didn’t like People she liked in small doses People she liked in large doses After discovering this, Hellen couldn’t figure out what made a person fit into any ofthese categories. They all were recommended to her by the dating site. The peoplewhom she liked in small doses were good to see Monday through Friday, but on theweekend she’d rather spend time with the people she liked in large doses. Hellen hasasked us to help her filter future matches to categorize them. In addition, Hellen hascollected some data that isn’t recorded by the dating site, but she feels it’s useful inselecting people to go out with. 实现步骤 原文： Collect: Text file provided. Prepare: Parse a text file in Python. Analyze: Use Matplotlib to make 2D plots of our data. Train: Doesn’t apply to the kNN algorithm. Test: Write a function to use some portion of the data Hellen gave us as test examples. The test examples are classified against the non-test examples. If thepredicted class doesn’t match the real class, we’ll count that as an error. Use: Build a simple command-line program Hellen can use to predict whethershe’ll like someone based on a few inputs. 准备海伦准备了一个txt格式数据集。一共有1000条信息]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
@@ -45,9 +45,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python机器学习（四）]]></title>
-    <url>%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%2FPython%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%94%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[kNN算法实例 本篇主要学到了kNN算法在实际生活中的运用，这里是实例之一：海伦约会 提出需求原文：My friend Hellen has been using some online dating sites to find different people togo out with. She realized that despite the site’s recommendations, she didn’t likeeveryone she was matched with. After some introspection, she realized there werethree types of people she went out with: People she didn’t like People she liked in small doses People she liked in large doses After discovering this, Hellen couldn’t figure out what made a person fit into any ofthese categories. They all were recommended to her by the dating site. The peoplewhom she liked in small doses were good to see Monday through Friday, but on theweekend she’d rather spend time with the people she liked in large doses. Hellen hasasked us to help her filter future matches to categorize them. In addition, Hellen hascollected some data that isn’t recorded by the dating site, but she feels it’s useful inselecting people to go out with. 实现步骤 原文： Collect: Text file provided. Prepare: Parse a text file in Python. Analyze: Use Matplotlib to make 2D plots of our data. Train: Doesn’t apply to the kNN algorithm. Test: Write a function to use some portion of the data Hellen gave us as test examples. The test examples are classified against the non-test examples. If thepredicted class doesn’t match the real class, we’ll count that as an error. Use: Build a simple command-line program Hellen can use to predict whethershe’ll like someone based on a few inputs. 准备海伦准备了一个txt格式数据集。一共有1000条信息]]></content>
+    <title><![CDATA[Python机器学习（二）]]></title>
+    <url>%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%2FPython%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[前言因为多变量分析内容太多，而且涉及很多的统计学基础（绝大部分高中都学过），所以这一章算是复习，分两篇来写。 数据分析之多变量分析Multivariate Analysis（多变量分析）多变量分析的意义就是研究多种自变量而得到因变量的表现。这看起来比单变量分析更加的真实和可靠，毕竟在现实生活中，各个事物都是互相联系的。 按生日和性别分析南希认为同一时期的男性用户使用频率要远大于女性用户。因为根据之前的表图，男性用户使用总次数要远多于女性。艾瑞克认为研究这个方面的最好的办法就是绘制一个堆叠柱状图（stacked bar graph）（柱状图中每一个柱都有两种以上的颜色，这里颜色代表性别）代码如下： 123groupby_birthyear_gender = data.groupby([&apos;birthyear&apos;, &apos;gender&apos;])[&apos;birthyear&apos;].count().unstack(&apos;gender&apos;).fillna(0)#以出生年月和性别排序，并将性别的索引由列改为行groupby_birthyear_gender[[&apos;Male&apos;,&apos;Female&apos;,&apos;Other&apos;]].plot.bar(title = &apos;Distribution of birth years by Gender&apos;, stacked=True, figsize = (15,4))plt.show() Output： 代码含义：我们先将数据帧的列索引用unstack函数给转换为行索引，之后，将gender这一个列给分为三种：男，女，其他。这样我们就有了三种性别的不同的行程总数。 由图可知男士的确占大多数，但是也有例外。比如1947年出生的人使用单车的全为女性。1964和1994的人也大多是女性。 按生日和用户类型分析在之前对80后用户的分析来看，所有的用户都是会员。南希非常好奇其他的年龄段的会员占比是多少？难道大多数都是普通用户？于是艾瑞克开始对生日和用户类型进行分析：123groupby_birthyear_usertype=data.groupby([&apos;birthyear&apos;,&apos;usertype&apos;])[&apos;birthyear&apos;].count().unstack(&apos;usertype&apos;).fillna(0)#以出生年月和用户类型排序，并将用户类型的索引由列改为行groupby_birthyear_usertype[&apos;Member&apos;].plot.bar(title=&apos;Distribution of birth years by Usertype&apos;,stacked=True,figsize=(15,4))plt.show() Output： 南希看了非常惊讶：咋全都是会员？难道只有正式会员才需要填写生日？艾瑞克决定验证一下1print(data[data[&apos;usertype&apos;]==&apos;Short-Term Pass Holder&apos;][&apos;birthyear&apos;].isnull().values.all())#验证普通会员是否有出生年月 Output：1True 果然，普通用户并没有填写生日。同样的，艾瑞克又验证了一下普通用户是否填写了性别，结果也是没有填写。说明我们没有任何关于普通用户的身份数据。南希不得不重新考虑之前的推断：关于80后的品牌忠诚度。因为根本不知道80后的会员在80后总人数占多少。这个数据废弃了南希之前的推断。 时间序列分析南希想知道基于开始日期的行程的频数。于是艾瑞克不得不把起始日期给转换为日期字符格式，他还做了更多，将日期拆分为多个小段（年，月，日，小时等）。 代码如下：12345678910List_=list(data[&apos;starttime&apos;])#把开始时间转换时间字符串List_=[datetime.datetime.strptime(x, &quot;%m/%d/%Y %H:%M&quot;) for x in List_]#将时间字符串转换为时间元组data[&apos;starttime_mod&apos;]=pd.Series(List_,index=data.index)#Series函数创建索引data[&apos;starttime_date&apos;] = pd.Series([x.date() for x in List_],index=data.index)data[&apos;starttime_year&apos;] = pd.Series([x.year for x in List_],index=data.index)data[&apos;starttime_month&apos;] = pd.Series([x.month for x in List_],index=data.index)data[&apos;starttime_day&apos;] = pd.Series([x.day for x in List_],index=data.index)data[&apos;starttime_hour&apos;] = pd.Series([x.hour for x in List_],index=data.index)data.groupby(&apos;starttime_date&apos;)[&apos;tripduration&apos;].mean().plot.bar(title = &apos;Distribution of Trip duration by date&apos;, figsize = (15,4))plt.show() Output： 这个表格看起来有一种显而易见的走势。这就引出了时间序列的一些定义。 Time Series Components下面是时间序列中最常见的三种走势图。 Seasonal Pattern（季节性走势）如图所示，季节性走势总是有着时间规律，这些时期可以是一月中的周数，一年中的周数，也可以是一年中的月数。 Cyclic Pattern（循环走势）循环走势唯一与季节性走势不同之处在于循环走势没有时间上的规律。 Trend（趋势）趋势就是一段宏观上来看上升或降低的连续变量。这种走势可能不是很精准的线性走势，but when smoothing is applied it can generalize into either of the direction.（这句话不会翻译，大概意思知道） 由这几个走势；来看，南希认为这个时间行程的走势明显是季节性走势。因为这个图的趋势总是有一段精确的时间间隔，这就是季节性。事实上，我们可以把分布给分为三种类型。一种是季节性，就是每隔一段时间就会重复。一种是水平密度分布（flat density distribution），第三种就是线性分布。 到这第二部分完毕]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
@@ -144,17 +144,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[私人用机场推荐]]></title>
-    <url>%2F%E6%8A%80%E6%9C%AF%2F2019-4-29-%E7%A7%81%E4%BA%BA%E7%94%A8%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90%2F</url>
-    <content type="text"><![CDATA[机场推荐最近在google上看到一个比较全面的机场推荐，每个机场还有节点测速，因为还在不断更新，所以就直接放链接了 毒药机场推荐 注：本篇转载文章作者与本人毫无瓜葛，在现实生活中未有任何接触！！！]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>个人笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Linux解压中文密码的压缩文件]]></title>
     <url>%2F%E6%8A%80%E6%9C%AF%2F2019-4-29-Linux%E8%A7%A3%E5%8E%8B%E4%B8%AD%E6%96%87%E5%AF%86%E7%A0%81%E7%9A%84%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[Linux解压中文密码的压缩文件最近遇到个小问题，我在ubuntu下解压某群友发的福利压缩文件（解压密码为中文）时，发现总是提示密码错误。 我第一时间想到了可能是linux和windows编码不同的区别。windows是gbk和utf-8，llinux是标准的utf-8。 导致两个系统的中文不通用。因为我日常使用ubuntu，不会为这点福利就下个windows，所以在网上找来找去，最后在简书上找到了答案。 下面就以unzip命令演示一哈： 1unzip -P &quot;$(echo -n 琴叶酱|iconv -f utf-8 -t gbk)&quot; 某个憨批的桌面文件？.zip 转码部分为1echo -n 琴叶酱|iconv -f utf-8 -t gbk 密码是琴叶酱，-f是from，-t是to。，语句意思为将echo输出的字符串从utf-8转码为gbk。 如果是从windows解压linux加密的压缩文件的话，将utf-8和gbk调换位置即可。]]></content>
@@ -163,6 +152,17 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[私人用机场推荐]]></title>
+    <url>%2F%E6%8A%80%E6%9C%AF%2F2019-4-29-%E7%A7%81%E4%BA%BA%E7%94%A8%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90%2F</url>
+    <content type="text"><![CDATA[机场推荐最近在google上看到一个比较全面的机场推荐，每个机场还有节点测速，因为还在不断更新，所以就直接放链接了 毒药机场推荐 注：本篇转载文章作者与本人毫无瓜葛，在现实生活中未有任何接触！！！]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>个人笔记</tag>
       </tags>
   </entry>
   <entry>
