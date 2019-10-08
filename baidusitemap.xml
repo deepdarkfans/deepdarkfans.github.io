@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.deepdark.com/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    <lastmod>2019-10-07</lastmod>
+    <lastmod>2019-10-08</lastmod>
   </url>  <url>
     <loc>https://www.deepdark.com/%E5%AF%86%E7%A0%81%E5%AD%A6/2019-10-06-%E5%AF%86%E7%A0%81%E5%AD%A6%E6%A6%82%E8%AE%BA/</loc>
     <lastmod>2019-10-06</lastmod>
@@ -46,10 +46,10 @@
     <loc>https://www.deepdark.com/%E6%97%A5%E5%B8%B8/2017-07-10-%E3%80%8C%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83%E7%90%86%E8%AE%BA%E3%80%8D%E4%B9%8B%E5%8A%9F%E8%83%BD%E6%80%A7/</loc>
     <lastmod>2019-05-07</lastmod>
   </url>  <url>
-    <loc>https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2017-12-26-%E4%BB%8E%E4%B8%80%E9%81%93%E7%BD%91%E6%98%93%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B5%85%E8%B0%88-Tagged-Pointer/</loc>
+    <loc>https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2017-12-19-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0-Gitalk-%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/</loc>
     <lastmod>2019-05-07</lastmod>
   </url>  <url>
-    <loc>https://www.deepdark.com/%E7%BC%96%E7%A8%8B/2017-09-11-Swift-4-%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
+    <loc>https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2017-07-26-%E5%88%A9%E7%94%A8-Debug-Memory-Graph-%E6%A3%80%E6%B5%8B%E5%86%85%E6%B5%8B%E6%B3%84%E6%BC%8F/</loc>
     <lastmod>2019-05-07</lastmod>
   </url>  <url>
     <loc>https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2017-07-24-iTunes-Connect-%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E4%B8%8D%E6%98%BE%E7%A4%BA/</loc>
@@ -58,13 +58,13 @@
     <loc>https://www.deepdark.com/%E7%BC%96%E7%A8%8B/2017-07-19-Swift%E7%9A%84HMAC%E5%92%8CSHA1%E5%8A%A0%E5%AF%86/</loc>
     <lastmod>2019-05-07</lastmod>
   </url>  <url>
-    <loc>https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2017-12-19-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0-Gitalk-%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/</loc>
+    <loc>https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2017-12-26-%E4%BB%8E%E4%B8%80%E9%81%93%E7%BD%91%E6%98%93%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B5%85%E8%B0%88-Tagged-Pointer/</loc>
     <lastmod>2019-05-07</lastmod>
   </url>  <url>
     <loc>https://www.deepdark.com/%E7%BC%96%E7%A8%8B/2017-10-04-GCD-%E5%9C%A8-Swift-%E4%B8%AD%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2019-05-07</lastmod>
   </url>  <url>
-    <loc>https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2017-07-26-%E5%88%A9%E7%94%A8-Debug-Memory-Graph-%E6%A3%80%E6%B5%8B%E5%86%85%E6%B5%8B%E6%B3%84%E6%BC%8F/</loc>
+    <loc>https://www.deepdark.com/%E7%BC%96%E7%A8%8B/2017-09-11-Swift-4-%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
     <lastmod>2019-05-07</lastmod>
   </url>  <url>
     <loc>https://www.deepdark.com/%E6%8A%80%E6%9C%AF/2019-4-29-Linux%E8%A7%A3%E5%8E%8B%E4%B8%AD%E6%96%87%E5%AF%86%E7%A0%81%E7%9A%84%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6/</loc>
@@ -94,10 +94,10 @@
     <loc>https://www.deepdark.com/uncategorized/2017-05-04-R.swift-%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2019-04-16</lastmod>
   </url>  <url>
-    <loc>https://www.deepdark.com/uncategorized/2017-05-05-%E5%9C%A8-Swift-%E4%B8%AD%E4%BD%BF%E7%94%A8-IBInspectable/</loc>
+    <loc>https://www.deepdark.com/uncategorized/2017-06-19-%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AEzsh/</loc>
     <lastmod>2019-04-16</lastmod>
   </url>  <url>
-    <loc>https://www.deepdark.com/uncategorized/2017-06-19-%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AEzsh/</loc>
+    <loc>https://www.deepdark.com/uncategorized/2017-05-05-%E5%9C%A8-Swift-%E4%B8%AD%E4%BD%BF%E7%94%A8-IBInspectable/</loc>
     <lastmod>2019-04-16</lastmod>
   </url>  <url>
     <loc>https://www.deepdark.com/uncategorized/2017-05-03-Swift-%E7%9A%84%E6%87%92%E5%8A%A0%E8%BD%BD%E5%92%8C%E8%AE%A1%E7%AE%97%E5%9E%8B%E5%B1%9E%E6%80%A7/</loc>
